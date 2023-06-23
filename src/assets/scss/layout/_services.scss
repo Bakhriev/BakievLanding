@@ -1,0 +1,53 @@
+.services {
+  padding-top: 320px;
+  &__container {
+    max-width: 650px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    text-align: center;
+    font-family: PP Neue Machina;
+    line-height: 100%;
+    font-weight: 400;
+
+    opacity: 0.7;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 32px;
+    font-family: PP Neue Machina;
+    font-weight: 400;
+    line-height: 125%;
+    letter-spacing: -0.8px;
+    text-transform: uppercase;
+    color: $light;
+  }
+
+  &__cards {
+    margin-top: 64px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+.card {
+  display: grid;
+  place-items: center;
+  max-width: 300px;
+  border-radius: 16px;
+  opacity: 0.800000011920929;
+  background: $bg-blue-button-cards;
+  padding: 56px 20px;
+  &__text {
+    text-align: center;
+    font-size: 18px;
+    line-height: 137.5%;
+
+    opacity: 0.9;
+    color: $light;
+  }
+}

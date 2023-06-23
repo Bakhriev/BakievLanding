@@ -15,6 +15,7 @@
 @import '../ui/buttons/shiny/shiny-btn.scss';
 @import '../ui/buttons/ripple/ripple-btn.scss';
 @import '../ui/bounceText/v-text.scss';
+@import '../ui/card/card-neon-stick/card-neon-stick.scss';
 
 // UI / DROPDOWN
 @import '../ui/dropdown/dropdown.scss';
@@ -29,6 +30,7 @@
 @import './layout/hero';
 @import './layout/founder';
 @import './layout/special';
+@import './layout/services';
 
 .main {
   position: relative;
@@ -55,4 +57,10 @@
   position: fixed;
   z-index: 2;
   backdrop-filter: blur(12vmax);
+}
+
+.gradient-text {
+  background: $text-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
