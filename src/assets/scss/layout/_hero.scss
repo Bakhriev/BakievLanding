@@ -41,7 +41,7 @@
     transition: opacity 0.2s ease-in-out;
 
     @include hover {
-      opacity: 0.9;
+      opacity: 1;
     }
 
     &:active {
