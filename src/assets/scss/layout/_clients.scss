@@ -1,0 +1,40 @@
+.clients {
+  padding-top: 250px;
+  &__container {
+    padding: 24px 0;
+
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  &__runner {
+    animation: ticker 18s infinite linear;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    overflow: auto;
+  }
+  &__item {
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 125%;
+    letter-spacing: -0.5px;
+    opacity: 0.7;
+    color: $light;
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translate(100%, 0);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
