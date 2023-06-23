@@ -145,7 +145,6 @@ export function rippleEffect(e) {
   span.style.left = `${x}px`
   span.style.top = `${y}px`
 
-  console.log(this)
   this.appendChild(span)
   setTimeout(() => {
     span.remove()

@@ -31,6 +31,10 @@
 @import './layout/founder';
 @import './layout/special';
 @import './layout/services';
+@import './layout/study';
+@import './layout/risk';
+@import './layout/design';
+@import './layout/help';
 
 .main {
   position: relative;
@@ -63,4 +67,36 @@
   background: $text-gradient;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.step-container {
+  max-width: 960px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.step-overtitle {
+  margin-bottom: 24px;
+  font-size: 16px;
+  font-family: PP Neue Machina;
+  line-height: 100%;
+  opacity: 0.7;
+}
+
+.step-title {
+  margin-bottom: 24px;
+  font-size: 26px;
+  font-family: PP Neue Machina;
+  font-weight: 400;
+  line-height: 137.5%;
+  letter-spacing: -0.65px;
+  text-transform: uppercase;
+  color: $light;
+}
+
+.step-text {
+  color: $light;
+  font-size: 18px;
+  line-height: 150%;
+  opacity: 0.6;
 }
