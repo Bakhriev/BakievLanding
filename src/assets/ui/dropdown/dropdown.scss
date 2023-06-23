@@ -23,7 +23,7 @@
   &__wrapper {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 5px;
   }
 
   @media screen and (max-width: 992px) {
@@ -65,7 +65,7 @@
   top: 35px;
   left: 50%;
   translate: -50% 0;
-  width: 120px;
+  min-width: 50px;
   z-index: 2;
   @media screen and (max-width: 992px) {
     display: flex;
@@ -103,7 +103,7 @@
     color: $dark;
 
     @include hover {
-      color: red;
+      color: aqua;
     }
     &:active {
       color: $dark;

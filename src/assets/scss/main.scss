@@ -13,6 +13,7 @@
 // UI / Buttons
 @import '../ui/buttons/epic/epic-btn.scss';
 @import '../ui/buttons/shiny/shiny-btn.scss';
+@import '../ui/buttons/ripple/ripple-btn.scss';
 @import '../ui/bounceText/v-text.scss';
 
 // UI / DROPDOWN
@@ -26,6 +27,8 @@
 @import './layout/header';
 @import './layout/footer';
 @import './layout/hero';
+@import './layout/founder';
+@import './layout/special';
 
 .main {
   position: relative;

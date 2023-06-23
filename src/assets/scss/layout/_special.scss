@@ -1,0 +1,22 @@
+.special {
+  &__container {
+  }
+
+  &__title {
+    font-size: 32px;
+    font-family: PP Neue Machina;
+    line-height: 125%;
+    letter-spacing: -0.8px;
+    text-transform: uppercase;
+    color: $light;
+    opacity: 0.8;
+    span {
+      background: linear-gradient(#9a07d5, #08e2ac);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__text {
+  }
+}
