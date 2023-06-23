@@ -38,6 +38,7 @@
 @import './layout/clients';
 @import './layout/experience';
 @import './layout/work';
+@import './layout/chat';
 
 .main {
   position: relative;
@@ -46,7 +47,7 @@
 
 .blob {
   background-color: white;
-  height: 34vmax;
+  height: 28vmax;
   aspect-ratio: 1;
   position: fixed;
   left: 50%;
@@ -102,4 +103,48 @@
   font-size: 18px;
   line-height: 150%;
   opacity: 0.6;
+}
+
+textarea {
+  resize: none;
+}
+
+.video-version {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 6;
+  right: 10px;
+  top: 58%;
+  width: 250px;
+  height: 160px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  border-radius: 8px;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #9a07d5 0%, #08e2ac 100%);
+    opacity: 0.5;
+  }
+}
+.play-btn {
+  position: relative;
+  z-index: 7;
+  margin-bottom: 5px;
+}
+.video-text {
+  position: relative;
+  z-index: 7;
+  max-width: 140px;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'PP Neue Machina';
+  font-weight: 400;
+  line-height: 100%;
+  color: $light;
 }

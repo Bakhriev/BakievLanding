@@ -2,7 +2,9 @@
   <div class="message__container">
     <div class="chatbox">
       <div class="chat site-chat">
-        <img src="assets/img/content/photo.png" alt="photo" />
+        <div class="chat__img">
+          <img src="assets/img/content/photo.png" alt="photo" />
+        </div>
         <div class="msg-container">
           <span class="msg">Привет! 👋</span>
         </div>
@@ -13,11 +15,14 @@
         </div>
       </div>
       <div class="chat site-chat">
-        <img src="assets/img/content/photo.png" alt="photo" />
+        <div class="chat__img">
+          <img src="assets/img/content/photo.png" alt="photo" />
+        </div>
         <div class="msg-container">
           <span class="msg">Чтобы продолжить, пожалуйста, представься</span>
           <span class="msg"
-            >Продолжая, ты принимаешь условия пользовательского соглашения</span
+            >Продолжая, ты принимаешь условия <br />
+            пользовательского соглашения</span
           >
         </div>
       </div>
@@ -37,11 +42,10 @@
           />
         </svg>
       </div>
-      <input
-        type="text"
+      <textarea
         class="message__field"
         placeholder="Начните вводить сообщение..."
-      />
+      ></textarea>
       <div class="message__controls">
         <div class="message__emoji">
           <svg
