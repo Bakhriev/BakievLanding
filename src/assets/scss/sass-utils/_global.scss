@@ -37,24 +37,37 @@ body {
 }
 
 .btn {
-  position: relative;
-  z-index: 1;
-
-  cursor: pointer;
   padding: 20px 48px;
-
   color: $light;
+  background: linear-gradient(135deg, #000e2a 0%, #000020 100%);
   border-radius: 12px;
-  opacity: 0.8;
-  background: $bg-blue-button-cards;
-  box-shadow: 0px 0px 56px 0px rgba(107, 210, 164, 0.24);
-  transition: opacity 0.2s ease-in-out;
+
+  width: max-content;
+  cursor: pointer;
+  user-select: none;
 
   @include hover {
-    opacity: 1;
+    &::after {
+      opacity: 1;
+    }
   }
+}
 
-  &:active {
-    scale: 0.97;
+.gradient-border {
+  position: relative;
+  @include hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border-radius: inherit;
+    inset: -2px;
+    background: linear-gradient(135deg, #9a07d5 0%, #08e2ac 100%);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
   }
 }
