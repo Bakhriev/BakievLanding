@@ -78,6 +78,7 @@
   margin-bottom: 24px;
   font-size: 16px;
   font-family: 'Neue Machina';
+  font-weight: 400;
   line-height: 100%;
   opacity: 0.7;
 }
@@ -136,10 +137,10 @@
   &__text {
     position: relative;
     z-index: 7;
-    max-width: 140px;
+    max-width: 150px;
     text-align: center;
     font-size: 16px;
-    font-family: 'PP Neue Machina';
+    font-family: 'Neue Machina';
     font-weight: 400;
     line-height: 100%;
     color: $light;
