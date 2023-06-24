@@ -28,7 +28,7 @@ const path = {
     html: distPath,
     css: distPath + 'assets/css/',
     vendors: distPath + 'assets/css/vendors',
-    jsVendors: distPath + 'assets/js/vendors',
+    // jsVendors: distPath + 'assets/js/vendors',
     js: distPath + 'assets/js/',
     images: distPath + 'assets/img/',
     fonts: distPath + 'assets/fonts/',
@@ -38,8 +38,9 @@ const path = {
     html: srcPath + '*.html',
     css: srcPath + 'assets/scss/*.scss',
     vendors: srcPath + 'assets/scss/vendors/**/*.{css, scss}',
-    jsVendors: distPath + 'assets/js/vendors/**/*.js',
-    js: srcPath + 'assets/js/**/*.js',
+    // jsVendors: distPath + 'assets/js/vendors/**/*.js',
+    // js: srcPath + 'assets/js/**/*.js',
+    js: srcPath + 'assets/js/*.js',
     images:
       srcPath +
       'assets/img/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}',
@@ -48,10 +49,11 @@ const path = {
   },
   watch: {
     html: srcPath + '**/*.html',
-    js: srcPath + 'assets/js/**/*.js',
+    // js: srcPath + 'assets/js/**/*.js',
+    js: srcPath + 'assets/js/*.js',
     css: srcPath + 'assets/**/*.scss',
     vendors: srcPath + 'assets/scss/vendors/**/*.{css, scss}',
-    jsVendors: distPath + 'assets/js/vendors/**/*.js',
+    // jsVendors: distPath + 'assets/js/vendors/**/*.js',
     images:
       srcPath +
       'assets/img/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}',
@@ -131,12 +133,12 @@ function vendors() {
     .pipe(browserSync.reload({ stream: true }))
 }
 
-function jsVendors() {
-  return src(path.src.jsVendors)
-    .pipe(plumber())
-    .pipe(dest(path.build.jsVendors))
-    .pipe(browserSync.reload({ stream: true }))
-}
+// function jsVendors() {
+//   return src(path.src.jsVendors)
+//     .pipe(plumber())
+//     .pipe(dest(path.build.jsVendors))
+//     .pipe(browserSync.reload({ stream: true }))
+// }
 
 function js() {
   return src(path.src.js, { base: srcPath + 'assets/js/' })
@@ -164,13 +166,13 @@ function js() {
     .pipe(browserSync.reload({ stream: true }))
 }
 
-function pages() {
-  return src(path.src.pages, { base: srcPath + 'assets/pages' })
-    .pipe(plumber())
-    .pipe(fileinclude({ prefix: '@', basepath: './src/assets/layouts' }))
-    .pipe(dest(path.build.pages))
-    .pipe(browserSync.reload({ stream: true }))
-}
+// function pages() {
+//   return src(path.src.pages, { base: srcPath + 'assets/pages' })
+//     .pipe(plumber())
+//     .pipe(fileinclude({ prefix: '@', basepath: './src/assets/layouts' }))
+//     .pipe(dest(path.build.pages))
+//     .pipe(browserSync.reload({ stream: true }))
+// }
 
 function images() {
   return src(path.src.images, { base: srcPath + 'assets/img/' })
@@ -209,15 +211,15 @@ function watchFiles() {
   gulp.watch([path.watch.js], js)
   gulp.watch([path.watch.images], images)
   gulp.watch([path.watch.images], webpImages)
-  gulp.watch([path.watch.pages], pages)
+  // gulp.watch([path.watch.pages], pages)
   gulp.watch([path.watch.fonts], fonts)
   gulp.watch([path.watch.vendors], vendors)
-  gulp.watch([path.watch.jsVendors], jsVendors)
+  // gulp.watch([path.watch.jsVendors], jsVendors)
 }
 
 const build = series(
   clean,
-  parallel(html, css, js, images, webpImages, fonts, pages, vendors, jsVendors)
+  parallel(html, css, js, images, webpImages, fonts, vendors)
 )
 const watch = parallel(build, watchFiles, serve)
 
@@ -227,9 +229,9 @@ exports.js = js
 exports.images = images
 exports.webpImages = webpImages
 exports.fonts = fonts
-exports.pages = pages
+// exports.pages = pages
 exports.vendors = vendors
-exports.jsVendors = jsVendors
+// exports.jsVendors = jsVendors
 exports.clean = clean
 exports.build = build
 exports.watch = watch
