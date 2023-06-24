@@ -1230,9 +1230,14 @@ body {
     gap: 32px;
 }
 
+.libraries__name {
+    color: #fff;
+}
+
 .message {
     width: 100%;
     padding-bottom: 15px;
+    padding-top: 300px;
 }
 
 .message__container {
@@ -1352,7 +1357,6 @@ body {
 
 .make {
     position: relative;
-    padding-bottom: 200px;
     padding-top: 165px;
 }
 

@@ -75,4 +75,7 @@
     flex-direction: column;
     gap: 32px;
   }
+  &__name {
+    color: $light;
+  }
 }
