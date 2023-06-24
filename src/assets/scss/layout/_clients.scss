@@ -1,17 +1,11 @@
 .clients {
   padding-top: 250px;
-  position: relative;
+  &.eng-clients {
+    padding-top: 340px;
+  }
   &__container {
     padding: 24px 0;
-
     background: rgba(255, 255, 255, 0.06);
-  }
-
-  &__model {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
   }
 
   &__runner {

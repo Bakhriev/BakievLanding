@@ -1,17 +1,14 @@
 .design {
-  padding-top: 300px;
+  padding-top: 690px;
   &__container {
     max-width: 960px;
     padding: 0 15px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
   &__info {
     max-width: 600px;
-  }
-
-  &__overTitle {
   }
 
   &__title {
@@ -21,6 +18,4 @@
   &__text {
     max-width: 461px;
   }
-}
-.gradient-text {
 }

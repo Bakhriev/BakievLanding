@@ -1,18 +1,10 @@
 .services {
-  position: relative;
   padding-top: 320px;
   padding-bottom: 330px;
   &__container {
     max-width: 650px;
     padding: 0 15px;
     margin: 0 auto;
-  }
-
-  &__model {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
   }
 
   &__title {
