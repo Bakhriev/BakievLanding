@@ -1,5 +1,6 @@
 .message {
   width: 100%;
+  padding-bottom: 15px;
 
   &__container {
     width: 100%;
@@ -36,8 +37,10 @@
     background-color: transparent;
     outline: none;
     border: none;
-
-    color: #8a8a8a;
+    color: $light;
+    &::placeholder {
+      color: #8a8a8a;
+    }
     font-size: 24px;
     font-family: 'SF Pro Text';
   }

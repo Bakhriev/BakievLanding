@@ -1,5 +1,9 @@
 .experience {
+  position: relative;
   padding-top: 220px;
+  &.eng-experience {
+    padding-bottom: 340px;
+  }
   &__container {
     max-width: 950px;
     padding: 0 15px;

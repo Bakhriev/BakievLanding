@@ -73,12 +73,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-.step-container {
-  max-width: 960px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
 .step-overtitle {
   margin-bottom: 24px;
   font-size: 16px;
@@ -153,4 +147,45 @@ textarea {
     line-height: 100%;
     color: $light;
   }
+}
+
+.make {
+  position: relative;
+  padding-bottom: 200px;
+  padding-top: 165px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 32, 0),
+      100%,
+      rgba(54, 251, 209, 0.71) 130%
+    );
+    height: 340px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    max-width: 550px;
+    text-align: center;
+    font-size: 48px;
+    line-height: 125%;
+    letter-spacing: -1.2px;
+    text-transform: uppercase;
+    color: $light;
+  }
+}
+
+.eng-clients {
+  padding-top: 0;
 }

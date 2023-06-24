@@ -1,9 +1,16 @@
 .special {
   padding-top: 328px;
   &__container {
+    position: relative;
     max-width: 960px;
     padding: 0 15px;
     margin: 0 auto;
+  }
+  &__model {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
   }
 
   &__title {

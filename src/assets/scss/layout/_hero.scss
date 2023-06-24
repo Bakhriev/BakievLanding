@@ -1,5 +1,7 @@
 .hero {
+  position: relative;
   padding-top: 220px;
+  padding-bottom: 435px;
   &__container {
     margin: 0 auto;
     max-width: 740px;
@@ -28,5 +30,11 @@
     font-size: 18px;
     line-height: 137.5%;
     opacity: 0.8;
+  }
+
+  &__model {
+    position: absolute;
+    top: 0;
+    z-index: -1;
   }
 }

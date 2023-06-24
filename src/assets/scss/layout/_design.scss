@@ -1,9 +1,11 @@
 .design {
-  padding-top: 690px;
+  padding-top: 300px;
   &__container {
+    max-width: 960px;
+    padding: 0 15px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    justify-content: space-between;
   }
   &__info {
     max-width: 600px;
