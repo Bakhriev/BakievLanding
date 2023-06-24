@@ -42,7 +42,7 @@
 
     text-align: center;
     font-size: 20px;
-    font-family: 'PP Neue Machina';
+    font-family: 'Neue Machina';
     font-weight: 400;
     line-height: 125%;
     letter-spacing: -0.5px;
@@ -87,7 +87,12 @@
     margin-bottom: 24px;
     display: flex;
     flex-direction: column;
+
     position: relative;
+    font-family: 'Neue Machina';
+    span {
+      font-family: 'Neue Machina';
+    }
 
     &::before {
       content: '';
