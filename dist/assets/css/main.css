@@ -967,6 +967,7 @@ body {
 
 .study__container {
     max-width: 1000px;
+    padding: 0 15px;
     width: 100%;
     margin: 0 auto;
 }
