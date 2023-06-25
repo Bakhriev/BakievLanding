@@ -26,10 +26,6 @@ body {
   padding: 0 15px;
 }
 
-// SF Pro Text Regular
-// Neue Machina
-// Inter
-
 .title {
   font-family: 'Neue Machina';
   font-weight: 400;
@@ -40,6 +36,7 @@ body {
   padding: 20px 48px;
   color: $light;
   background: linear-gradient(135deg, #000e2a 0%, #000020 100%);
+  box-shadow: 0px 0px 56px 0px rgba(107, 210, 164, 0.24);
   border-radius: 12px;
 
   width: max-content;
@@ -69,5 +66,84 @@ body {
     background: linear-gradient(135deg, #9a07d5 0%, #08e2ac 100%);
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
+  }
+}
+
+.gradient-text {
+  background: $text-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.step-overtitle {
+  margin-bottom: 24px;
+  font-size: 16px;
+  font-family: 'Neue Machina';
+  font-weight: 400;
+  line-height: 100%;
+  opacity: 0.7;
+}
+
+.step-title {
+  margin-bottom: 24px;
+  font-size: 26px;
+  font-family: 'Neue Machina';
+  font-weight: 400;
+  line-height: 137.5%;
+  letter-spacing: -0.65px;
+  text-transform: uppercase;
+  color: $light;
+}
+
+.step-text {
+  color: $light;
+  font-size: 18px;
+  line-height: 150%;
+  opacity: 0.6;
+}
+
+.video-card {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  z-index: 6;
+  right: 10px;
+  top: 58%;
+  width: 250px;
+  height: 160px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #9a07d5 0%, #08e2ac 100%);
+    opacity: 0.5;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 7;
+  }
+
+  &__btn {
+    position: relative;
+    z-index: 7;
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 7;
+    max-width: 150px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Neue Machina';
+    font-weight: 400;
+    line-height: 100%;
+    color: $light;
   }
 }

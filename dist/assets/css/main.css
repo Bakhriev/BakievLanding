@@ -213,6 +213,7 @@ body {
     padding: 20px 48px;
     color: #fff;
     background: linear-gradient(135deg, #000e2a 0%, #000020 100%);
+    box-shadow: 0px 0px 56px 0px rgba(107, 210, 164, 0.24);
     border-radius: 12px;
     width: -moz-max-content;
     width: max-content;
@@ -247,6 +248,86 @@ body {
     background: linear-gradient(135deg, #9a07d5 0%, #08e2ac 100%);
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #9a07d5 0%, #08e2ac 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.step-overtitle {
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-family: "Neue Machina";
+    font-weight: 400;
+    line-height: 100%;
+    opacity: 0.7;
+}
+
+.step-title {
+    margin-bottom: 24px;
+    font-size: 26px;
+    font-family: "Neue Machina";
+    font-weight: 400;
+    line-height: 137.5%;
+    letter-spacing: -0.65px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.step-text {
+    color: #fff;
+    font-size: 18px;
+    line-height: 150%;
+    opacity: 0.6;
+}
+
+.video-card {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    z-index: 6;
+    right: 10px;
+    top: 58%;
+    width: 250px;
+    height: 160px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #9a07d5 0%, #08e2ac 100%);
+    opacity: 0.5;
+}
+
+.video-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 7;
+}
+
+.video-card__btn {
+    position: relative;
+    z-index: 7;
+    margin-bottom: 5px;
+}
+
+.video-card__text {
+    position: relative;
+    z-index: 7;
+    max-width: 150px;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Neue Machina";
+    font-weight: 400;
+    line-height: 100%;
+    color: #fff;
 }
 
 .shiny-btn {
@@ -486,7 +567,7 @@ body {
 
 .burger.active span::before, .burger.active span::after {
     transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
-    background-color: #000;
+    background-color: #fff;
 }
 
 .burger.active span::before {
@@ -508,7 +589,7 @@ body {
     width: 26px;
     transform-origin: 50% 50%;
     transition: 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
-    background-color: #000;
+    background-color: #fff;
 }
 
 .burger span::before, .burger span::after {
@@ -516,7 +597,7 @@ body {
     position: absolute;
     height: 2px;
     width: 26px;
-    background-color: #000;
+    background-color: #fff;
     transform-origin: 50% 50%;
     transition: 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
 }
@@ -594,7 +675,15 @@ body {
     padding: 10px 12px;
     color: #fff;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.06);
+    background-color: rgba(255, 255, 255, 0.06);
+    opacity: 0.8;
+    transition: opacity 0.2s ease-in-out;
+}
+
+@media (any-hover: hover) and (pointer: fine) {
+    .header__btn:hover {
+        opacity: 1;
+    }
 }
 
 .nav__list {
@@ -1294,108 +1383,4 @@ body {
 .main {
     position: relative;
     z-index: 2;
-}
-
-.blob {
-    background-color: white;
-    height: 28vmax;
-    aspect-ratio: 1;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    border-radius: 50%;
-    background: linear-gradient(to right, aquamarine, mediumpurple);
-    animation: rotate 20s infinite;
-    opacity: 0.8;
-    z-index: 0;
-}
-
-.blur {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 2;
-    -webkit-backdrop-filter: blur(12vmax);
-    backdrop-filter: blur(12vmax);
-}
-
-.gradient-text {
-    background: linear-gradient(#9a07d5, #08e2ac);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.step-overtitle {
-    margin-bottom: 24px;
-    font-size: 16px;
-    font-family: "Neue Machina";
-    font-weight: 400;
-    line-height: 100%;
-    opacity: 0.7;
-}
-
-.step-title {
-    margin-bottom: 24px;
-    font-size: 26px;
-    font-family: "Neue Machina";
-    font-weight: 400;
-    line-height: 137.5%;
-    letter-spacing: -0.65px;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-.step-text {
-    color: #fff;
-    font-size: 18px;
-    line-height: 150%;
-    opacity: 0.6;
-}
-
-.video-card {
-    display: grid;
-    place-items: center;
-    position: fixed;
-    z-index: 6;
-    right: 10px;
-    top: 58%;
-    width: 250px;
-    height: 160px;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.video-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, #9a07d5 0%, #08e2ac 100%);
-    opacity: 0.5;
-}
-
-.video-card__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 7;
-}
-
-.video-card__btn {
-    position: relative;
-    z-index: 7;
-    margin-bottom: 5px;
-}
-
-.video-card__text {
-    position: relative;
-    z-index: 7;
-    max-width: 150px;
-    text-align: center;
-    font-size: 16px;
-    font-family: "Neue Machina";
-    font-weight: 400;
-    line-height: 100%;
-    color: #fff;
 }
