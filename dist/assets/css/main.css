@@ -318,6 +318,10 @@ body {
         opacity: 1;
         box-shadow: 0px 0px 76px 0px rgba(107, 210, 164, 0.4);
     }
+
+    .video-card:hover .video-card__btn::after {
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -379,12 +383,6 @@ body {
     width: 60px;
     height: 60px;
     background: rgba(255, 255, 255, 0.08);
-}
-
-@media (any-hover: hover) and (pointer: fine) {
-    .video-card__btn:hover::after {
-        opacity: 1;
-    }
 }
 
 .video-card__text {
