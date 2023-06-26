@@ -66,6 +66,9 @@ body {
     background: linear-gradient(135deg, #9a07d5 0%, #08e2ac 100%);
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
+    @media screen and (max-width: $tablet) {
+      opacity: 1;
+    }
   }
 }
 
@@ -76,7 +79,6 @@ body {
 }
 
 .step-overtitle {
-  margin-bottom: 24px;
   font-size: 16px;
   font-family: 'Neue Machina';
   font-weight: 400;
@@ -85,7 +87,6 @@ body {
 }
 
 .step-title {
-  margin-bottom: 24px;
   font-size: 26px;
   font-family: 'Neue Machina';
   font-weight: 400;
@@ -93,6 +94,10 @@ body {
   letter-spacing: -0.65px;
   text-transform: uppercase;
   color: $light;
+  @media screen and (max-width: $tablet) {
+    font-size: 24px;
+    letter-spacing: -0.6px;
+  }
 }
 
 .step-text {
@@ -100,30 +105,42 @@ body {
   font-size: 18px;
   line-height: 150%;
   opacity: 0.6;
+  @media screen and (max-width: $tablet) {
+    font-size: 16px;
+  }
 }
 
 .video-card {
   display: grid;
   place-items: center;
   position: fixed;
-  z-index: 6;
+  z-index: 5;
   right: 10px;
   top: 58%;
   width: 250px;
   height: 160px;
   border-radius: 8px;
   overflow: hidden;
+  opacity: 0.6;
+  transition: opacity 0.2s ease, box-shadow 0.2s ease;
+  @include hover {
+    opacity: 1;
+    box-shadow: 0px 0px 76px 0px rgba(107, 210, 164, 0.4);
+  }
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
 
   &::before {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg, #9a07d5 0%, #08e2ac 100%);
-    opacity: 0.5;
   }
   &__content {
     display: flex;
     flex-direction: column;
+    gap: 16px;
     align-items: center;
     position: relative;
     z-index: 7;
@@ -133,6 +150,43 @@ body {
     position: relative;
     z-index: 7;
     margin-bottom: 5px;
+    border-radius: 50%;
+    width: 39px;
+    height: 39px;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+
+      border: 0.5px solid rgba(255, 255, 255, 0.04);
+    }
+    &::after {
+      content: '';
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+    @include hover {
+      &::after {
+        opacity: 1;
+      }
+    }
   }
 
   &__text {
@@ -146,4 +200,12 @@ body {
     line-height: 100%;
     color: $light;
   }
+}
+
+.disable-scroll {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none !important;
 }

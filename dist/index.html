@@ -14,56 +14,17 @@
         <div class="video-card__content">
           <button class="video-card__btn" aria-label="click to play video">
             <svg
-              width="55"
-              height="54"
-              viewBox="0 0 55 54"
+              width="7"
+              height="9"
+              viewBox="0 0 7 9"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <rect
-                x="0.5"
-                width="54"
-                height="54"
-                rx="27"
-                fill="white"
-                fill-opacity="0.03"
-              />
-              <rect
-                x="8.21472"
-                y="7.71436"
-                width="38.5714"
-                height="38.5714"
-                rx="19.2857"
-                fill="url(#paint0_linear_2_22)"
-              />
               <path
                 opacity="0.8"
-                d="M30.3452 26.2955C31.0005 26.7083 31.0005 27.7648 30.3452 28.1776L25.562 31.1901C24.9192 31.5949 24.125 31.0748 24.125 30.249V24.2241C24.125 23.3983 24.9192 22.8782 25.562 23.2831L30.3452 26.2955Z"
+                d="M6.34517 3.29551C7.00055 3.70833 7.00055 4.7648 6.34517 5.17762L1.56204 8.19009C0.919243 8.59492 0.125 8.07484 0.125 7.24904V1.22408C0.125 0.398308 0.919243 -0.121792 1.56204 0.283052L6.34517 3.29551Z"
                 fill="white"
               />
-              <rect
-                x="0.741071"
-                y="0.241071"
-                width="53.5179"
-                height="53.5179"
-                rx="26.7589"
-                stroke="white"
-                stroke-opacity="0.05"
-                stroke-width="0.482143"
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear_2_22"
-                  x1="27.5004"
-                  y1="7.71436"
-                  x2="27.5004"
-                  y2="46.2858"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="white" stop-opacity="0" />
-                  <stop offset="1" stop-color="white" stop-opacity="0.1" />
-                </linearGradient>
-              </defs>
             </svg>
           </button>
           <div class="video-card__text">Включить видео-версию сайта</div>
@@ -88,20 +49,6 @@
             <button class="dropdown" data-dropdown>
               <div class="dropdown__wrapper">
                 <div class="selected nav__link">RUS</div>
-                <svg
-                  width="10"
-                  height="6"
-                  viewBox="0 0 10 6"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.48047 1.11331L5.12832 4.31369L8.77552 1.11331"
-                    stroke="white"
-                    stroke-width="1.4"
-                    stroke-linecap="round"
-                  />
-                </svg>
               </div>
               <ul class="sub-menu">
                 <li><a class="sub-menu__link" href="#">ENG</a></li>
@@ -269,7 +216,9 @@
 </section>
  <section class="risk">
   <div class="risk__container">
-    <div class="gradient-text step-overtitle">Минимизация рисков</div>
+    <div class="gradient-text step-overtitle risk__overTitle">
+      Минимизация рисков
+    </div>
     <h3 class="risk__title step-title">Проектирование информационных систем</h3>
     <p class="risk__text step-text">
       Проектирование информационной системы необходимо для минимизации рисков и
@@ -317,32 +266,32 @@
  <section class="clients">
   <div class="clients__container">
     <div class="clients__runner">
-      <div class="clients__item">
-        <h4 class="clients__title title">НАШИ КЛИЕНТЫ</h4>
-      </div>
-      <div class="clients__item">
-        <img
-          width="187"
-          height="57"
-          src="assets/img/content/clients1.png"
-          alt="clients"
-        />
-      </div>
-      <div class="clients__item">
-        <img
-          width="187"
-          height="57"
-          src="assets/img/content/clients2.png"
-          alt="clients"
-        />
-      </div>
-      <div class="clients__item">
-        <img
-          width="187"
-          height="57"
-          src="assets/img/content/clients3.png"
-          alt="clients"
-        />
+      <div class="clients__title title">нашы клиенты</div>
+      <div class="clients__items">
+        <div class="clients__item">
+          <img
+            width="187"
+            height="57"
+            src="assets/img/content/clients1.png"
+            alt="clients"
+          />
+        </div>
+        <div class="clients__item">
+          <img
+            width="187"
+            height="57"
+            src="assets/img/content/clients2.png"
+            alt="clients"
+          />
+        </div>
+        <div class="clients__item">
+          <img
+            width="187"
+            height="57"
+            src="assets/img/content/clients3.png"
+            alt="clients"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -412,46 +361,53 @@
     </ul>
   </div>
 </section>
- <section class="message">
+ <div class="message">
   <div class="message__container">
-    <div class="chatbox">
-      <div class="chat site-chat">
+    <div class="chat">
+      <!--  -->
+      <div class="chat__box">
         <div class="chat__img">
-          <img src="assets/img/content/photo.png" alt="photo" />
+          <img src="assets/img/content/photo.png" alt="profile photo" />
         </div>
-        <div class="msg-container">
-          <span class="msg">Привет! 👋</span>
-          <span class="msg"
-            >Хочешь, чтобы твой бизнес стал еще эффективнее?</span
-          >
-        </div>
-      </div>
-      <div class="chat user-chat">
-        <div class="msg-container">
-          <span class="msg">Да, конечно!</span>
+        <div class="chat__messages">
+          <!-- СЮДА ДОБАВЛЯЕТСЯ СООБЩЕНИЕ -->
+          <div class="chat__msg">Привет! 👋</div>
+          <div class="chat__msg">
+            Хочешь, чтобы твой бизнес стал еще эффективнее?
+          </div>
         </div>
       </div>
-      <div class="chat site-chat">
+      <!--  -->
+      <div class="chat__box">
+        <div class="chat__messages">
+          <div class="chat__msg chat__msg--gradient">Да, конечно!</div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="chat__box">
         <div class="chat__img">
-          <img src="assets/img/content/photo.png" alt="photo" />
+          <img src="assets/img/content/photo.png" alt="profile photo" />
         </div>
-        <div class="msg-container">
-          <span class="msg">Чтобы продолжить, пожалуйста, представься</span>
-          <span class="msg"
-            >Продолжая, ты принимаешь условия <br />
-            пользовательского соглашения</span
-          >
+        <div class="chat__messages">
+          <div class="chat__msg">Чтобы продолжить, пожалуйста, представься</div>
+          <div class="chat__msg">
+            Продолжая, ты принимаешь условия <br />
+            пользовательского соглашения
+          </div>
         </div>
       </div>
+      <!--  -->
     </div>
-    <div class="message__type">
+  </div>
+  <div class="message__container">
+    <div class="message__field">
       <div class="message__attach">
         <svg
           width="37"
           height="37"
           viewBox="0 0 37 37"
-          fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          fill="#8A8A8A"
         >
           <path
             d="M18.0337 6.59006C21.5229 3.09769 27.1841 3.09769 30.6758 6.58941C34.078 9.99159 34.1652 15.4534 30.9375 18.9612L30.6571 19.2553L17.5435 32.3662L17.489 32.4113C15.3115 34.3735 11.9526 34.3069 9.85535 32.2096C7.88978 30.244 7.7078 27.1703 9.30943 24.9995C9.34421 24.9319 9.38631 24.8667 9.4358 24.8054L9.51561 24.7165L9.64511 24.5858L9.85535 24.3654L9.8597 24.3697L20.9403 13.2614C21.3366 12.8641 21.9574 12.8272 22.3954 13.1513L22.5209 13.2593C22.9182 13.6556 22.9551 14.2764 22.631 14.7144L22.523 14.8399L11.2056 26.1848C10.1362 27.4896 10.2105 29.4183 11.4286 30.6364C12.6641 31.8718 14.6306 31.9306 15.9357 30.8129L29.098 17.6539C31.714 15.0347 31.714 10.7888 29.0952 8.16998C26.5583 5.63303 22.4943 5.55375 19.8619 7.93214L19.6117 8.16998L19.593 8.19131L5.3822 22.4022C4.94573 22.8386 4.23809 22.8386 3.80162 22.4022C3.40484 22.0054 3.36876 21.3845 3.69341 20.9469L3.80162 20.8216L18.0312 6.58941L18.0337 6.59006Z"
@@ -460,7 +416,7 @@
         </svg>
       </div>
       <textarea
-        class="message__field"
+        class="message__input"
         placeholder="Начните вводить сообщение..."
       ></textarea>
       <div class="message__controls">
@@ -478,7 +434,7 @@
             />
           </svg>
         </div>
-        <div class="message__mic">
+        <div class="message__voice">
           <svg
             width="37"
             height="37"
@@ -495,7 +451,7 @@
       </div>
     </div>
   </div>
-</section>
+</div>
 
       </main>
       <footer class="footer"></footer>

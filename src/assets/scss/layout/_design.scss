@@ -1,8 +1,11 @@
 .design {
   padding-top: 690px;
+  @media screen and (max-width: $tablet) {
+    padding-top: 425px;
+  }
   &__container {
     max-width: 960px;
-    padding: 0 15px;
+    padding: 0 20px;
     margin: 0 auto;
     display: flex;
     justify-content: flex-end;
@@ -11,7 +14,18 @@
     max-width: 600px;
   }
 
+  &__overTitle {
+    margin-bottom: 24px;
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 20px;
+    }
+  }
+
   &__title {
+    margin-bottom: 24px;
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 20px;
+    }
     max-width: 440px;
   }
 

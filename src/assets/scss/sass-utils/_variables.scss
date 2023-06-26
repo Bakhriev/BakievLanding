@@ -9,15 +9,19 @@ $bg-blue-button-cards: linear-gradient(135deg, #000e2a 0%, #000020 100%);
 $bg-white: rgba(255, 255, 255, 0.06);
 $text-gradient: linear-gradient(135deg, #9a07d5 0%, #08e2ac 100%);
 
+$bg-blend-purple: linear-gradient(#7aeea6, #c074ff, #3a1ed0);
+$bg-purple-green-gradient: linear-gradient(135deg, #9a07d5 0%, #08e2ac 100%);
+$bg-blend-purple-2: #7aeea6;
+
 // extra colors
 $light: #fff;
 $dark: #222;
 
 // Media
 
-$medium: 992px;
+$medium: 1024px;
 $large: 1366px;
-$tablet: 768px;
+$tablet: 992px;
 $big: 1920;
 
 // InFo

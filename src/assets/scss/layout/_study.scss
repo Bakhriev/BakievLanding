@@ -1,12 +1,23 @@
 .study {
+  padding-top: 330px;
   &__container {
     max-width: 1000px;
-    padding: 0 15px;
+    padding: 0 20px;
     width: 100%;
     margin: 0 auto;
   }
+  &__overTitle {
+    margin-bottom: 24px;
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 20px;
+    }
+  }
 
   &__title {
+    margin-bottom: 24px;
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 20px;
+    }
     max-width: 456px;
   }
 

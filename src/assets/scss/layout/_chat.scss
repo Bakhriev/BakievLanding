@@ -1,112 +1,153 @@
 .message {
-  width: 100%;
-  padding-bottom: 15px;
   padding-top: 300px;
+  padding-bottom: 20px;
+
+  @media screen and (max-width: $tablet) {
+    padding-top: 620px;
+    padding-bottom: 0;
+  }
 
   &__container {
-    width: 100%;
-    padding: 0 15px;
+    padding: 0 20px;
+    &:nth-child(even) {
+      @media screen and (max-width: $tablet) {
+        padding: 0;
+      }
+    }
+  }
+
+  &__field {
+    margin-top: 32px;
+    padding: 20px 18px 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    border-radius: 12px;
+    @media screen and (max-width: $tablet) {
+      margin-top: 40px;
+      border-radius: 0;
+      gap: 15px;
+      padding: 20px 10px 10px;
+    }
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  &__attach {
+    cursor: pointer;
+    flex-shrink: 0;
+    @media screen and (max-width: $tablet) {
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__input {
+    flex-grow: 1;
+    background-color: transparent;
+    outline: none;
+    color: $light;
+    padding-bottom: 64px;
+    @media screen and (max-width: $tablet) {
+      padding-bottom: 18px;
+    }
+    ::placeholder {
+      color: #8a8a8a;
+    }
+    font-size: 18px;
+    line-height: 125%;
+  }
+
+  &__controls {
+    display: flex;
+    gap: 30px;
+    min-width: 105px;
+    @media screen and (max-width: $tablet) {
+      min-width: 50px;
+    }
+    flex-shrink: 0;
+  }
+
+  &__emoji {
+    cursor: pointer;
+    @media screen and (max-width: $tablet) {
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__voice {
+    cursor: pointer;
+    @media screen and (max-width: $tablet) {
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  &__box {
+    display: flex;
+    align-items: flex-end;
+    gap: 9px;
+    &:nth-child(even) {
+      margin-left: auto;
+    }
   }
 
   &__img {
     flex-shrink: 0;
     width: 52px;
+    height: 52px;
     border-radius: 50%;
     overflow: hidden;
-  }
-
-  &__type {
-    position: relative;
-    margin-top: 33px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.06);
-    padding: 20px 105px;
-    min-height: 140px;
-    padding-right: 145px;
-  }
-
-  &__attach {
-    position: absolute;
-    cursor: pointer;
-    left: 20px;
-    top: 20px;
-  }
-
-  &__field {
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    outline: none;
-    border: none;
-    color: $light;
-    &::placeholder {
-      color: #8a8a8a;
+    @media screen and (max-width: $tablet) {
+      display: none;
     }
-    font-size: 24px;
-    font-family: 'SF Pro Text';
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 
-  &__controls {
+  &__messages {
     display: flex;
-    align-items: center;
-    gap: 30px;
-    position: absolute;
-    right: 20px;
-    top: 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    &:nth-child(even) {
+      align-items: flex-start;
+    }
   }
 
-  &__emoji {
-    cursor: pointer;
-  }
-
-  &__mic {
-    cursor: pointer;
-  }
-}
-.chatbox {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.chat {
-  width: max-content;
-}
-.site-chat {
-  display: flex;
-  align-items: flex-end;
-  gap: 9px;
-  .msg {
-    font-family: 'SF Pro Text';
-    font-weight: 400;
+  &__msg {
+    border-radius: 21px 21px 21px 6px;
     background: rgba(255, 255, 255, 0.1);
+    padding: 20px 24px;
+    color: $light;
+    font-size: 18px;
+    line-height: 125%;
+    @media screen and (max-width: $tablet) {
+      font-size: 16px;
+    }
   }
-}
-.msg-container {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
 
-.msg {
-  display: block;
-  border-radius: 21px 21px 21px 6px;
-  width: max-content;
-  padding: 24px;
-  display: grid;
-  place-items: center;
-
-  color: $light;
-  font-size: 21px;
-  font-family: 'SF Pro Text';
-  font-weight: 400;
-}
-
-.user-chat {
-  margin-left: auto;
-
-  border-radius: 20px 21px 6px 20px;
-  opacity: 0.8;
-  background: linear-gradient(135deg, #15f3c0 0%, #09022b 100%);
-  overflow: hidden;
+  &__msg--gradient {
+    background: linear-gradient(135deg, #15f3c0 0%, #09022b 100%);
+    padding-right: 76px;
+    @media screen and (max-width: $tablet) {
+      padding-right: 24px;
+    }
+  }
 }

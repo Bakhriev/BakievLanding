@@ -1,13 +1,28 @@
 .help {
   padding-top: 380px;
+  @media screen and (max-width: $tablet) {
+    padding-top: 540px;
+  }
   &__container {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 20px;
+  }
+
+  &__overTitle {
+    margin-bottom: 24px;
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 20px;
+    }
   }
 
   &__title {
+    margin-bottom: 24px;
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 20px;
+    }
     max-width: 500px;
   }
 
@@ -16,5 +31,8 @@
   }
   &__btn {
     margin-top: 112px;
+    @media screen and (max-width: $tablet) {
+      margin-top: 72px;
+    }
   }
 }

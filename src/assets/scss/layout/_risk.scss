@@ -1,14 +1,29 @@
 .risk {
   padding-top: 345px;
+  @media screen and (max-width: $tablet) {
+    padding-top: 475px;
+  }
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 0 20px;
+  }
+
+  &__overTitle {
+    margin-bottom: 24px;
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 20px;
+    }
   }
 
   &__title {
+    margin-bottom: 24px;
     max-width: 460px;
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 20px;
+    }
   }
 
   &__text {

@@ -1,14 +1,19 @@
 .services {
   padding-top: 320px;
-  padding-bottom: 330px;
+  @media screen and (max-width: $tablet) {
+    padding-top: 550px;
+  }
   &__container {
-    max-width: 650px;
-    padding: 0 15px;
+    max-width: 660px;
+    padding: 0 20px;
     margin: 0 auto;
   }
 
   &__title {
     margin-bottom: 24px;
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 20px;
+    }
     text-align: center;
     font-family: 'Neue Machina';
 
@@ -27,10 +32,19 @@
     letter-spacing: -0.8px;
     text-transform: uppercase;
     color: $light;
+    @media screen and (max-width: $tablet) {
+      font-size: 26px;
+      line-height: 137.5%;
+      letter-spacing: -0.65px;
+    }
   }
 
   &__cards {
     margin-top: 64px;
+    @media screen and (max-width: $tablet) {
+      margin-top: 48px;
+      justify-content: center;
+    }
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -53,6 +67,9 @@
     text-align: center;
     font-size: 18px;
     line-height: 137.5%;
+    @media screen and (max-width: $tablet) {
+      font-size: 16px;
+    }
 
     opacity: 0.9;
     color: $light;

@@ -2,24 +2,27 @@ function burgerMenu() {
   const burger = document.querySelector('.burger')
   const navigation = document.querySelector('.header__navigation')
   const overlay = document.querySelector('.overlay')
-
+  const body = document.querySelector('body')
   burger.addEventListener('click', () => {
     burger.classList.toggle('active')
     navigation.classList.toggle('active')
     overlay.classList.toggle('active')
+    body.classList.toggle('disable-scroll')
   })
 
   overlay.addEventListener('click', () => {
     burger.classList.remove('active')
     navigation.classList.remove('active')
     overlay.classList.remove('active')
+    body.classList.remove('disable-scroll')
   })
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 991.98) {
+    if (window.innerWidth > 992.98) {
       burger.classList.remove('active')
       navigation.classList.remove('active')
       overlay.classList.remove('active')
+      body.classList.remove('disable-scroll')
     }
   })
 }
@@ -29,7 +32,7 @@ burgerMenu()
 const dropdownInit = () => {
   const allDropdowns = document.querySelectorAll('[data-dropdown]')
 
-  if (window.innerWidth > 992) {
+  if (window.innerWidth > 992.98) {
     document.addEventListener('click', e => {
       let currentDropdown
       if (e.target.closest('[data-dropdown]')) {
@@ -68,3 +71,8 @@ const dropdownInit = () => {
   }
 }
 dropdownInit()
+
+if (window.innerWidth < 992.98) {
+  const textArea = document.querySelector('.message__input')
+  textArea.placeholder = 'Сообщение'
+}
