@@ -66,9 +66,6 @@ body {
     background: linear-gradient(135deg, #9a07d5 0%, #08e2ac 100%);
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
-    @media screen and (max-width: $tablet) {
-      opacity: 1;
-    }
   }
 }
 

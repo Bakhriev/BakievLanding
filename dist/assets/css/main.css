@@ -248,12 +248,6 @@ body {
     transition: opacity 0.2s ease-in-out;
 }
 
-@media screen and (max-width: 992px) {
-    .gradient-border::before {
-        opacity: 1;
-    }
-}
-
 .gradient-text {
     background: linear-gradient(135deg, #9a07d5 0%, #08e2ac 100%);
     -webkit-background-clip: text;
@@ -1391,6 +1385,12 @@ body {
     background: rgba(255, 255, 255, 0.06);
 }
 
+@media screen and (max-width: 992px) {
+    .clients__container {
+        background: none;
+    }
+}
+
 .clients__runner {
     padding-left: 50px;
     display: flex;
@@ -1403,6 +1403,7 @@ body {
     .clients__runner {
         flex-direction: column;
         padding-left: 0;
+        gap: 64px;
     }
 }
 
@@ -1410,6 +1411,13 @@ body {
     display: flex;
     overflow: auto;
     gap: 70px;
+}
+
+@media screen and (max-width: 992px) {
+    .clients__items {
+        flex-direction: column;
+        gap: 48px;
+    }
 }
 
 .clients__item {
@@ -1423,6 +1431,17 @@ body {
     opacity: 0.7;
     color: #fff;
     text-transform: uppercase;
+}
+
+@media screen and (max-width: 992px) {
+    .clients__title {
+        text-align: center;
+        font-size: 26px;
+        font-family: "Neue Machina";
+        line-height: 137.5%;
+        letter-spacing: -0.65px;
+        text-transform: uppercase;
+    }
 }
 
 .experience {
