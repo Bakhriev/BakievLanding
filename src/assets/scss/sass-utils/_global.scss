@@ -4,6 +4,25 @@ body {
   font-weight: 400;
   font-size: 16px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background: $bg-blue-button-cards;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $bg-blend-purple;
+    background-image: -webkit-gradient(
+      linear,
+      0 0,
+      0 100%,
+      color-stop(0.5, rgba(255, 255, 255, 0.25)),
+      color-stop(0.5, transparent),
+      to(transparent)
+    );
+  }
 }
 
 // Wrapper
@@ -22,8 +41,8 @@ body {
 .container {
   margin: 0 auto;
 
-  max-width: 970px;
-  padding: 0 15px;
+  max-width: 980px;
+  padding: 0 20px;
 }
 
 .title {
@@ -34,10 +53,12 @@ body {
 
 .btn {
   padding: 20px 48px;
-  color: $light;
   background: linear-gradient(135deg, #000e2a 0%, #000020 100%);
   box-shadow: 0px 0px 56px 0px rgba(107, 210, 164, 0.24);
   border-radius: 12px;
+
+  font-size: 18px;
+  line-height: 137.5%;
 
   width: max-content;
   cursor: pointer;
@@ -70,7 +91,13 @@ body {
 }
 
 .gradient-text {
-  background: $text-gradient;
+  background: $text-purple-green-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-text-2 {
+  background: #9a07d5;
+  background: linear-gradient(to bottom right, #9a07d5 0%, #08e2ac 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -90,7 +117,6 @@ body {
   line-height: 137.5%;
   letter-spacing: -0.65px;
   text-transform: uppercase;
-  color: $light;
   @media screen and (max-width: $tablet) {
     font-size: 24px;
     letter-spacing: -0.6px;
@@ -98,7 +124,7 @@ body {
 }
 
 .step-text {
-  color: $light;
+  color: $text-white;
   font-size: 18px;
   line-height: 150%;
   opacity: 0.6;
@@ -137,7 +163,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #9a07d5 0%, #08e2ac 100%);
+    background: $bg-purple-green-gradient;
   }
   &__content {
     display: flex;
@@ -195,8 +221,13 @@ body {
     font-family: 'Neue Machina';
     font-weight: 400;
     line-height: 100%;
-    color: $light;
   }
+}
+
+.text-white-gradient {
+  background: $text-white-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .disable-scroll {

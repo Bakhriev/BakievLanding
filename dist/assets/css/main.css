@@ -185,6 +185,20 @@ body {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background: linear-gradient(135deg, #000e2a 0%, #000020 100%);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #c074ff;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255, 255, 255, 0.25)), color-stop(0.5, transparent), to(transparent));
+}
+
 .wrapper {
     position: relative;
     z-index: 2;
@@ -197,8 +211,8 @@ body {
 
 .container {
     margin: 0 auto;
-    max-width: 970px;
-    padding: 0 15px;
+    max-width: 980px;
+    padding: 0 20px;
 }
 
 .title {
@@ -209,10 +223,11 @@ body {
 
 .btn {
     padding: 20px 48px;
-    color: #fff;
     background: linear-gradient(135deg, #000e2a 0%, #000020 100%);
     box-shadow: 0px 0px 56px 0px rgba(107, 210, 164, 0.24);
     border-radius: 12px;
+    font-size: 18px;
+    line-height: 137.5%;
     width: -moz-max-content;
     width: max-content;
     cursor: pointer;
@@ -254,6 +269,13 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+.gradient-text-2 {
+    background: #9a07d5;
+    background: linear-gradient(to bottom right, #9a07d5 0%, #08e2ac 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .step-overtitle {
     font-size: 16px;
     font-family: "Neue Machina";
@@ -269,7 +291,6 @@ body {
     line-height: 137.5%;
     letter-spacing: -0.65px;
     text-transform: uppercase;
-    color: #fff;
 }
 
 @media screen and (max-width: 992px) {
@@ -388,7 +409,12 @@ body {
     font-family: "Neue Machina";
     font-weight: 400;
     line-height: 100%;
-    color: #fff;
+}
+
+.text-white-gradient {
+    background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.7) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .disable-scroll {
@@ -679,6 +705,7 @@ body {
 
 .header__logo {
     position: relative;
+    flex-shrink: 0;
     display: block;
     z-index: 11;
 }
@@ -792,12 +819,12 @@ body {
 .hero::before {
     content: "";
     position: absolute;
-    left: 150px;
-    top: 250px;
+    left: 130px;
+    top: 230px;
     z-index: -1;
-    width: 300px;
-    height: 300px;
-    background: linear-gradient(#7aeea6, #c074ff, #3a1ed0);
+    width: 350px;
+    height: 350px;
+    background: #c074ff;
     opacity: 0.1;
     filter: blur(105px);
     border-radius: 50%;
@@ -824,15 +851,13 @@ body {
 }
 
 .hero__container {
-    margin: 0 auto;
-    max-width: 760px;
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .hero__title {
+    max-width: 720px;
     margin-bottom: 24px;
     font-family: "Neue Machina";
     font-weight: 400;
@@ -840,7 +865,6 @@ body {
     font-size: 48px;
     line-height: 125%;
     letter-spacing: -1.2px;
-    color: #fff;
 }
 
 @media screen and (max-width: 992px) {
@@ -879,9 +903,6 @@ body {
 }
 
 .founder__container {
-    max-width: 942px;
-    margin: 0 auto;
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -929,7 +950,6 @@ body {
     font-weight: 400;
     line-height: 125%;
     letter-spacing: -0.5px;
-    color: #fff;
     opacity: 0.8;
 }
 
@@ -949,8 +969,6 @@ body {
     text-align: center;
     font-size: 18px;
     line-height: 150%;
-    opacity: 0.8;
-    color: #fff;
 }
 
 @media screen and (max-width: 992px) {
@@ -1010,8 +1028,8 @@ body {
     top: 6px;
     width: 1px;
     height: 35px;
-    background-color: #fff;
-    opacity: 0.6;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.06);
 }
 
 .founder__stepInfo {
@@ -1039,12 +1057,6 @@ body {
     }
 }
 
-.special__container {
-    max-width: 960px;
-    padding: 0 20px;
-    margin: 0 auto;
-}
-
 .special__title {
     max-width: 530px;
     margin-bottom: 24px;
@@ -1054,8 +1066,6 @@ body {
     line-height: 125%;
     letter-spacing: -0.8px;
     text-transform: uppercase;
-    color: #fff;
-    opacity: 0.8;
 }
 
 @media screen and (max-width: 992px) {
@@ -1102,8 +1112,7 @@ body {
 }
 
 .services__container {
-    max-width: 660px;
-    padding: 0 20px;
+    max-width: 620px;
     margin: 0 auto;
 }
 
@@ -1130,7 +1139,6 @@ body {
     line-height: 125%;
     letter-spacing: -0.8px;
     text-transform: uppercase;
-    color: #fff;
 }
 
 @media screen and (max-width: 992px) {
@@ -1189,13 +1197,6 @@ body {
     padding-top: 330px;
 }
 
-.study__container {
-    max-width: 1000px;
-    padding: 0 20px;
-    width: 100%;
-    margin: 0 auto;
-}
-
 .study__overTitle {
     margin-bottom: 24px;
 }
@@ -1236,7 +1237,6 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
 }
 
 .risk__overTitle {
@@ -1275,9 +1275,6 @@ body {
 }
 
 .design__container {
-    max-width: 960px;
-    padding: 0 20px;
-    margin: 0 auto;
     display: flex;
     justify-content: flex-end;
 }
@@ -1326,7 +1323,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 20px;
 }
 
 .help__overTitle {
@@ -1392,7 +1388,6 @@ body {
 }
 
 .clients__runner {
-    padding-left: 50px;
     display: flex;
     align-items: center;
     gap: 70px;
@@ -1411,6 +1406,22 @@ body {
     display: flex;
     overflow: auto;
     gap: 70px;
+}
+
+.clients__items::-webkit-scrollbar {
+    height: 8px;
+}
+
+.clients__items::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+}
+
+.clients__items::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #000e2a 0%, #000020 100%);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255, 255, 255, 0.25)), color-stop(0.5, transparent), to(transparent));
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 992px) {
@@ -1454,12 +1465,6 @@ body {
     }
 }
 
-.experience__container {
-    max-width: 950px;
-    padding: 0 20px;
-    margin: 0 auto;
-}
-
 .experience__info {
     display: flex;
     flex-direction: column;
@@ -1480,12 +1485,12 @@ body {
     line-height: 125%;
     letter-spacing: -0.8px;
     text-transform: uppercase;
-    color: #fff;
 }
 
 .experience__text {
     max-width: 600px;
     color: #fff;
+    opacity: 0.7;
     text-align: center;
     font-size: 18px;
     line-height: 150%;
@@ -1513,8 +1518,6 @@ body {
     font-weight: 400;
     line-height: 125%;
     letter-spacing: -0.5px;
-    color: #fff;
-    opacity: 0.8;
 }
 
 @media screen and (max-width: 992px) {
@@ -1530,8 +1533,7 @@ body {
     top: 10px;
     width: 1px;
     height: 35px;
-    background-color: #fff;
-    opacity: 0.6;
+    background: rgba(255, 255, 255, 0.06);
 }
 
 @media screen and (max-width: 992px) {
@@ -1555,9 +1557,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 15px;
 }
 
 .work__model {
@@ -1582,13 +1581,11 @@ body {
 
 .work__title {
     max-width: 500px;
-    color: #fff;
     text-align: center;
     font-size: 32px;
     line-height: 125%;
     letter-spacing: -0.8px;
     text-transform: uppercase;
-    opacity: 0.9;
 }
 
 @media screen and (max-width: 992px) {
@@ -1630,7 +1627,7 @@ body {
 }
 
 .work__items {
-    max-width: 540px;
+    max-width: 480px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -1663,8 +1660,6 @@ body {
     font-family: "Neue Machina";
     line-height: 125%;
     letter-spacing: -0.5px;
-    color: #fff;
-    opacity: 0.86;
 }
 
 @media screen and (max-width: 992px) {

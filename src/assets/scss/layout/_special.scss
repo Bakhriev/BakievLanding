@@ -3,11 +3,6 @@
   @media screen and (max-width: $tablet) {
     padding-top: 180px;
   }
-  &__container {
-    max-width: 960px;
-    padding: 0 20px;
-    margin: 0 auto;
-  }
 
   &__title {
     max-width: 530px;
@@ -18,8 +13,6 @@
     line-height: 125%;
     letter-spacing: -0.8px;
     text-transform: uppercase;
-    color: $light;
-    opacity: 0.8;
     @media screen and (max-width: $tablet) {
       margin-bottom: 32px;
       font-size: 26px;
@@ -32,7 +25,7 @@
     max-width: 440px;
     font-size: 18px;
     line-height: 150%;
-    color: $light;
+    color: $text-white;
     opacity: 0.9;
     &:not(:last-child) {
       margin-bottom: 16px;

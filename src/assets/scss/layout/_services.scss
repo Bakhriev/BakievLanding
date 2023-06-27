@@ -4,8 +4,7 @@
     padding-top: 550px;
   }
   &__container {
-    max-width: 660px;
-    padding: 0 20px;
+    max-width: 620px;
     margin: 0 auto;
   }
 
@@ -31,7 +30,6 @@
     line-height: 125%;
     letter-spacing: -0.8px;
     text-transform: uppercase;
-    color: $light;
     @media screen and (max-width: $tablet) {
       font-size: 26px;
       line-height: 137.5%;
@@ -72,6 +70,6 @@
     }
 
     opacity: 0.9;
-    color: $light;
+    color: $text-white;
   }
 }
