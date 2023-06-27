@@ -56,15 +56,16 @@ body {
   background: linear-gradient(135deg, #000e2a 0%, #000020 100%);
   box-shadow: 0px 0px 56px 0px rgba(107, 210, 164, 0.24);
   border-radius: 12px;
-
   font-size: 18px;
   line-height: 137.5%;
 
   width: max-content;
   cursor: pointer;
   user-select: none;
+  transition: box-shadow 0.2s ease-in-out;
 
   @include hover {
+    box-shadow: 0px 0px 96px 0px rgba(107, 210, 164, 0.56);
     &::after {
       opacity: 1;
     }

@@ -234,9 +234,14 @@ body::-webkit-scrollbar-thumb {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
+    transition: box-shadow 0.2s ease-in-out;
 }
 
 @media (any-hover: hover) and (pointer: fine) {
+    .btn:hover {
+        box-shadow: 0px 0px 96px 0px rgba(107, 210, 164, 0.56);
+    }
+
     .btn:hover::after {
         opacity: 1;
     }
