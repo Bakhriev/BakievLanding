@@ -4,15 +4,15 @@ $burgerActiveColor: #fff;
 
 // Text Gradients, text colors
 $text-white-gradient: linear-gradient(
-  180deg,
-  #fff 0%,
-  rgba(255, 255, 255, 0.7) 100%
+	180deg,
+	#fff 0%,
+	rgba(255, 255, 255, 0.7) 100%
 );
 $text-purple-green-gradient: linear-gradient(135deg, #9a07d5 0%, #08e2ac 100%);
 $text-purple-green-gradient-2: linear-gradient(
-  174deg,
-  #9a07d5 40%,
-  #08e2ac 60%
+	174deg,
+	#9a07d5 40%,
+	#08e2ac 60%
 );
 
 $text-white: #fff;
@@ -24,14 +24,14 @@ $bg-purple-green-gradient: linear-gradient(135deg, #9a07d5 0%, #08e2ac 100%);
 $bg-blue-green-gradient: linear-gradient(135deg, #15f3c0 0%, #09022b 100%);
 $bg-blue-button-cards: linear-gradient(135deg, #000e2a 0%, #000020 100%);
 $bg-white-gradient: linear-gradient(
-  180deg,
-  rgba(255, 255, 255, 0.2) 0%,
-  rgba(255, 255, 255, 0.14) 100%
+	180deg,
+	rgba(255, 255, 255, 0.2) 0%,
+	rgba(255, 255, 255, 0.14) 100%
 );
 $bg-green-gradient: linear-gradient(
-  90deg,
-  rgba(3, 1, 24, 0) 0%,
-  rgba(54, 251, 209, 0.71) 100%
+	90deg,
+	rgba(3, 1, 24, 0) 0%,
+	rgba(54, 251, 209, 0.71) 100%
 );
 
 // Background Colors
@@ -47,7 +47,7 @@ $dark: #222;
 
 // Media
 
-$medium: 1024px;
-$large: 1366px;
-$tablet: 992px;
 $big: 1920;
+$large: 1366px;
+$medium: 1024px;
+$tablet: 992px;

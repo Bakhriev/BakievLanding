@@ -240,8 +240,9 @@ function serve() {
 	})
 }
 
-function prod() {
+function prod(done) {
 	!isProd
+	done()
 }
 
 const dev = series(
