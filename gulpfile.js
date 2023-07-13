@@ -37,7 +37,7 @@ const path = {
 		fonts: distPath + 'assets/fonts',
 	},
 	src: {
-		html: srcPath + '**/*.html',
+		html: srcPath + '/*.html',
 		css: srcPath + 'assets/scss/**/*.scss',
 		js: srcPath + 'assets/js/*.js',
 		img: srcPath + 'assets/img/*.{jpg,jpeg,png,svg}',
@@ -86,23 +86,11 @@ function cssMinify() {
 				level: 2,
 			})
 		)
-		.pipe(
-			rename({
-				suffix: '.min',
-			})
-		)
 		.pipe(dest(path.build.css))
 }
 
 function jsMinify() {
-	return src(path.src.js)
-		.pipe(uglify())
-		.pipe(
-			rename({
-				suffix: '.min',
-			})
-		)
-		.pipe(dest(path.build.js))
+	return src(path.src.js).pipe(uglify()).pipe(dest(path.build.js))
 }
 
 function imgMinify() {
@@ -289,4 +277,5 @@ exports.vendors = vendors
 exports.fonts = fonts
 exports.build = build
 exports.watchFiles = watchFiles
+
 exports.default = runParallel

@@ -20,6 +20,8 @@ dist/assets/img/svg/sprite.svg
 id у svg иконки берется из его названия, arrow.svg будет sprite.svg#arrow ниже есть пример
 по умолчанию у них удалены fill stroke цвета для удобства стилизования
 
+Добавил !!!!!! yarn build билд версию
+
 <!--
 <svg>
     <use xlink:href="assets/img/svg/sprite.svg#arrow"></use>
