@@ -1,9 +1,10 @@
 // Base
+@import './sass-utils/variables';
+
 @import './fonts/fonts';
 @import './base/reset';
 
 // Sass-utils
-@import './sass-utils/variables';
 @import './sass-utils/disable-mob-hover';
 @import './sass-utils/global';
 
@@ -15,8 +16,8 @@
 @import './layout/header';
 @import './layout/footer';
 @import './layout/hero';
-@import './layout/founder';
 @import './layout/special';
+@import './layout/founder';
 @import './layout/services';
 @import './layout/study';
 @import './layout/risk';
