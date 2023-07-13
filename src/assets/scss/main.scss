@@ -1,21 +1,11 @@
-// Fonts
-@import './fonts/fonts';
-
 // Base
+@import './fonts/fonts';
 @import './base/reset';
 
 // Sass-utils
 @import './sass-utils/variables';
 @import './sass-utils/disable-mob-hover';
 @import './sass-utils/global';
-
-// UI
-// UI / Buttons
-@import '../ui/buttons/shiny/shiny-btn.scss';
-@import '../ui/bounceText/v-text.scss';
-
-// UI / DROPDOWN
-@import '../ui/dropdown/dropdown.scss';
 
 //Components
 @import './components/overlay';
@@ -39,5 +29,5 @@
 @import './layout/make';
 
 .main {
-  position: relative;
+	position: relative;
 }

@@ -1,40 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-  @include('head.html')
-  <body>
-    <div class="wrapper">
-      <a href="#" class="video-card">
-        <div class="video-card__content">
-          <button class="video-card__btn" aria-label="click to play video">
-            <svg
-              width="7"
-              height="9"
-              viewBox="0 0 7 9"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                opacity="0.8"
-                d="M6.34517 3.29551C7.00055 3.70833 7.00055 4.7648 6.34517 5.17762L1.56204 8.19009C0.919243 8.59492 0.125 8.07484 0.125 7.24904V1.22408C0.125 0.398308 0.919243 -0.121792 1.56204 0.283052L6.34517 3.29551Z"
-                fill="white"
-              />
-            </svg>
-          </button>
-          <div class="video-card__text text-white-gradient">
-            Включить видео-версию сайта
-          </div>
-        </div>
-      </a>
-      <div class="overlay"></div>
-      @include('header.html')
-      <main class="main">
-        @include('hero.html') @include('founder.html') @include('special.html')
-        @include('services.html') @include('study.html') @include('risk.html')
-        @include('design.html') @include('help.html') @include('clients.html')
-        @include('experience.html') @include('work.html') @include('chat.html')
-      </main>
-      @include('footer.html')
-    </div>
-    <script type="module" src="./assets/js/main.min.js"></script>
-  </body>
+	@include('assets/layout/head.html')
+	<body>
+		<div class="wrapper">
+			<div class="overlay"></div>
+			@include('assets/layout/header.html')
+			<main class="main">
+				@include('assets/layout/hero.html')
+				@include('assets/layout/founder.html')
+				@include('assets/layout/special.html')
+				@include('assets/layout/services.html')
+				@include('assets/layout/study.html') @include('assets/layout/risk.html')
+				@include('assets/layout/design.html')
+				@include('assets/layout/help.html')
+				@include('assets/layout/clients.html')
+				@include('assets/layout/experience.html')
+				@include('assets/layout/work.html') @include('assets/layout/chat.html')
+			</main>
+			@include('assets/layout/footer.html')
+		</div>
+		<script type="module" src="./assets/js/main.min.js"></script>
+	</body>
 </html>

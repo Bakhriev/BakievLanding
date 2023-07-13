@@ -1,32 +1,21 @@
 .design {
-  padding-top: 690px;
-  @media screen and (max-width: $tablet) {
-    padding-top: 425px;
-  }
-  &__container {
-    display: flex;
-    justify-content: flex-end;
-  }
-  &__info {
-    max-width: 600px;
-  }
+	padding-top: 448px;
+	@media screen and (max-width: $tablet) {
+		padding-top: 425px;
+	}
+	&__container {
+		display: flex;
+		justify-content: flex-end;
+		flex-direction: column;
+		align-items: center;
+		gap: 72px;
+	}
 
-  &__overTitle {
-    margin-bottom: 24px;
-    @media screen and (max-width: $tablet) {
-      margin-bottom: 20px;
-    }
-  }
+	&__title {
+		max-width: 590px;
+	}
 
-  &__title {
-    margin-bottom: 24px;
-    @media screen and (max-width: $tablet) {
-      margin-bottom: 20px;
-    }
-    max-width: 440px;
-  }
-
-  &__text {
-    max-width: 461px;
-  }
+	&__text {
+		max-width: 564px;
+	}
 }

@@ -1,238 +1,233 @@
 'use strict'
 
-const { src, dest, series, parallel } = require('gulp')
-const gulp = require('gulp')
-const autoprefixer = require('gulp-autoprefixer')
-const fileinclude = require('gulp-file-include')
-const cssbeautify = require('gulp-cssbeautify')
-const removeComments = require('gulp-strip-css-comments')
-const rename = require('gulp-rename')
-const rigger = require('gulp-rigger')
-const sass = require('gulp-sass')(require('sass'))
-const uncss = require('gulp-uncss')
-const cssnano = require('gulp-cssnano')
-const uglify = require('gulp-uglify')
-const plumber = require('gulp-plumber')
-const imagemin = require('gulp-imagemin')
-const del = require('del')
-const notify = require('gulp-notify')
-const imagewebp = require('gulp-webp')
-const browserSync = require('browser-sync').create()
+const {src, dest, series, parallel, watch} = require('gulp')
 
-/* Paths */
+const sass = require('gulp-sass')(require('node-sass'))
+const autoprefixer = require('gulp-autoprefixer')
+const plumber = require('gulp-plumber')
+const cssbeautify = require('gulp-cssbeautify')
+const rename = require('gulp-rename')
+const cleanCss = require('gulp-clean-css')
+const browserSync = require('browser-sync').create()
+const notify = require('gulp-notify')
+const fileinclude = require('gulp-file-include')
+const del = require('del')
+const concat = require('gulp-concat')
+const uglify = require('gulp-uglify')
+const svgSprite = require('gulp-svg-sprite')
+const svgmin = require('gulp-svgmin')
+const cheerio = require('gulp-cheerio')
+const replace = require('gulp-replace')
+const imagemin = require('gulp-imagemin')
+const webp = require('gulp-webp')
+
+// Paths
 const srcPath = 'src/'
 const distPath = 'dist/'
 
 const path = {
-  build: {
-    html: distPath,
-    css: distPath + 'assets/css/',
-    vendors: distPath + 'assets/css/vendors',
-    // jsVendors: distPath + 'assets/js/vendors',
-    js: distPath + 'assets/js/',
-    images: distPath + 'assets/img/',
-    fonts: distPath + 'assets/fonts/',
-    pages: distPath + 'assets/pages/',
-  },
-  src: {
-    html: srcPath + '*.html',
-    css: srcPath + 'assets/scss/*.scss',
-    vendors: srcPath + 'assets/scss/vendors/**/*.{css, scss}',
-    // jsVendors: distPath + 'assets/js/vendors/**/*.js',
-    // js: srcPath + 'assets/js/**/*.js',
-    js: srcPath + 'assets/js/*.js',
-    images:
-      srcPath +
-      'assets/img/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}',
-    fonts: srcPath + 'assets/fonts/**/*.{eot,woff,woff2,ttf,svg}',
-    pages: srcPath + 'assets/pages/**/*.html',
-  },
-  watch: {
-    html: srcPath + '**/*.html',
-    // js: srcPath + 'assets/js/**/*.js',
-    js: srcPath + 'assets/js/*.js',
-    css: srcPath + 'assets/**/*.scss',
-    vendors: srcPath + 'assets/scss/vendors/**/*.{css, scss}',
-    // jsVendors: distPath + 'assets/js/vendors/**/*.js',
-    images:
-      srcPath +
-      'assets/img/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}',
-    fonts: srcPath + 'assets/fonts/**/*.{eot,woff,woff2,ttf,svg}',
-    pages: srcPath + 'assets/pages/**/*.html',
-  },
-  clean: './' + distPath,
-}
-
-function serve() {
-  browserSync.init({
-    server: {
-      baseDir: './' + distPath,
-    },
-  })
+	build: {
+		html: distPath,
+		css: distPath + 'assets/css',
+		js: distPath + 'assets/js',
+		img: distPath + 'assets/img',
+		svg: distPath + 'assets/img/svg',
+		vendors: distPath + 'assets/vendors',
+		fonts: distPath + 'assets/fonts',
+	},
+	src: {
+		html: srcPath + '**/*.html',
+		css: srcPath + 'assets/scss/**/*.scss',
+		js: srcPath + 'assets/js/*.js',
+		img: srcPath + 'assets/img/*.{jpg,jpeg,png,svg}',
+		svg: srcPath + 'assets/img/svg/**/*.svg',
+		vendors: srcPath + 'assets/vendors/**/*.{css,js}',
+		fonts: srcPath + 'assets/fonts/**/*',
+	},
+	clean: distPath,
 }
 
 function html() {
-  return src(path.src.html, { base: srcPath })
-    .pipe(plumber())
-    .pipe(fileinclude({ prefix: '@', basepath: './src/assets/layouts' }))
-    .pipe(dest(path.build.html))
-    .pipe(browserSync.reload({ stream: true }))
+	return src(path.src.html)
+		.pipe(
+			fileinclude({
+				prefix: '@',
+				basepath: '@file',
+			})
+		)
+		.pipe(dest(path.build.html))
+		.pipe(browserSync.reload({stream: true}))
 }
 
 function css() {
-  return src(path.src.css, { base: srcPath + 'assets/scss/' })
-    .pipe(
-      plumber({
-        errorHandler: function (err) {
-          notify.onError({
-            title: 'SCSS Error',
-            message: 'Error: <%= error.message %>',
-          })(err)
-          this.emit('end')
-        },
-      })
-    )
-    .pipe(sass())
-    .pipe(autoprefixer())
-    .pipe(cssbeautify())
-    .pipe(dest(path.build.css))
-    .pipe(
-      cssnano({
-        zindex: false,
-        discardComments: {
-          removeAll: true,
-        },
-      })
-    )
-    .pipe(removeComments())
-    .pipe(
-      rename({
-        suffix: '.min',
-        extname: '.css',
-      })
-    )
+	return src(path.src.css)
+		.pipe(
+			plumber({
+				errorHandler: function (err) {
+					notify.onError({
+						title: 'SCSS Error',
+						message: 'Error: <%= error.message %>',
+					})(err)
+					this.emit('end')
+				},
+			})
+		)
+		.pipe(sass())
+		.pipe(
+			autoprefixer({
+				cascade: false,
+			})
+		)
+		.pipe(cssbeautify())
+		.pipe(dest(path.build.css))
+		.pipe(
+			cleanCss({
+				level: 2,
+			})
+		)
+		.pipe(
+			rename({
+				suffix: '.min',
+			})
+		)
+		.pipe(dest(path.build.css))
+		.pipe(browserSync.reload({stream: true}))
+}
 
-    .pipe(dest(path.build.css))
-    .pipe(browserSync.reload({ stream: true }))
+function js() {
+	return src(path.src.js)
+		.pipe(
+			plumber({
+				errorHandler: function (err) {
+					notify.onError({
+						title: 'JS Error',
+						message: 'Error: <%= error.message %>',
+					})(err)
+					this.emit('end')
+				},
+			})
+		)
+		.pipe(dest(path.build.js))
+		.pipe(uglify())
+		.pipe(
+			rename({
+				suffix: '.min',
+			})
+		)
+		.pipe(dest(path.build.js))
+		.pipe(browserSync.reload({stream: true}))
+}
+
+function img() {
+	return src(path.src.img)
+		.pipe(
+			imagemin([
+				imagemin.mozjpeg({
+					quality: 80,
+					progressive: true,
+				}),
+				imagemin.optipng({
+					optimizationLevel: 2,
+				}),
+			])
+		)
+		.pipe(dest(path.build.img))
+}
+
+function webpImg() {
+	return src(path.src.img)
+		.pipe(webp())
+		.pipe(dest(distPath + 'assets/img/webp'))
+		.pipe(browserSync.reload({stream: true}))
+}
+
+function svg() {
+	return src(path.src.svg)
+		.pipe(
+			svgmin({
+				js2svg: {
+					pretty: true,
+				},
+			})
+		)
+		.pipe(
+			cheerio({
+				run: function ($) {
+					$('[fill]').removeAttr('fill')
+					$('[stroke]').removeAttr('stroke')
+					$('[style]').removeAttr('style')
+				},
+				parserOptions: {
+					xmlMode: true,
+				},
+			})
+		)
+		.pipe(replace('&gt;', '>'))
+		.pipe(
+			svgSprite({
+				mode: {
+					stack: {
+						sprite: '../sprite.svg',
+					},
+				},
+			})
+		)
+		.pipe(dest(path.build.svg))
+		.pipe(browserSync.reload({stream: true}))
 }
 
 function vendors() {
-  return src(path.src.vendors)
-    .pipe(plumber())
-    .pipe(
-      cssnano({
-        zindex: false,
-        discardComments: {
-          removeAll: true,
-        },
-      })
-    )
-
-    .pipe(removeComments())
-    .pipe(dest(path.build.vendors))
-    .pipe(browserSync.reload({ stream: true }))
-}
-
-// function jsVendors() {
-//   return src(path.src.jsVendors)
-//     .pipe(plumber())
-//     .pipe(dest(path.build.jsVendors))
-//     .pipe(browserSync.reload({ stream: true }))
-// }
-
-function js() {
-  return src(path.src.js, { base: srcPath + 'assets/js/' })
-    .pipe(
-      plumber({
-        errorHandler: function (err) {
-          notify.onError({
-            title: 'JS Error',
-            message: 'Error: <%= error.message %>',
-          })(err)
-          this.emit('end')
-        },
-      })
-    )
-    .pipe(rigger())
-    .pipe(dest(path.build.js))
-    .pipe(uglify())
-    .pipe(
-      rename({
-        suffix: '.min',
-        extname: '.js',
-      })
-    )
-    .pipe(dest(path.build.js))
-    .pipe(browserSync.reload({ stream: true }))
-}
-
-// function pages() {
-//   return src(path.src.pages, { base: srcPath + 'assets/pages' })
-//     .pipe(plumber())
-//     .pipe(fileinclude({ prefix: '@', basepath: './src/assets/layouts' }))
-//     .pipe(dest(path.build.pages))
-//     .pipe(browserSync.reload({ stream: true }))
-// }
-
-function images() {
-  return src(path.src.images, { base: srcPath + 'assets/img/' })
-    .pipe(
-      imagemin([
-        imagemin.gifsicle({ interlaced: true }),
-        imagemin.mozjpeg({ quality: 80, progressive: true }),
-        imagemin.optipng({ optimizationLevel: 5 }),
-        imagemin.svgo({
-          plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
-        }),
-      ])
-    )
-    .pipe(dest(path.build.images))
-}
-
-function webpImages() {
-  return src(path.src.images, { base: srcPath + 'assets/img/' })
-    .pipe(imagewebp())
-    .pipe(dest(path.build.images))
+	return src(path.src.vendors)
+		.pipe(dest(path.build.vendors))
+		.pipe(browserSync.reload({stream: true}))
 }
 
 function fonts() {
-  return src(path.src.fonts, { base: srcPath + 'assets/fonts/' })
-    .pipe(dest(path.build.fonts))
-    .pipe(browserSync.reload({ stream: true }))
+	return src(path.src.fonts)
+		.pipe(dest(path.build.fonts))
+		.pipe(browserSync.reload({stream: true}))
 }
 
+// Other Tasks
 function clean() {
-  return del(path.clean)
+	return del(path.clean)
 }
+
+function serve() {
+	browserSync.init({
+		server: {
+			baseDir: distPath,
+		},
+	})
+}
+
+const dev = series(
+	clean,
+	parallel(html, css, js, img, webpImg, svg, vendors, fonts),
+	serve
+)
 
 function watchFiles() {
-  gulp.watch([path.watch.html], html)
-  gulp.watch([path.watch.css], css)
-  gulp.watch([path.watch.js], js)
-  gulp.watch([path.watch.images], images)
-  gulp.watch([path.watch.images], webpImages)
-  // gulp.watch([path.watch.pages], pages)
-  gulp.watch([path.watch.fonts], fonts)
-  gulp.watch([path.watch.vendors], vendors)
-  // gulp.watch([path.watch.jsVendors], jsVendors)
+	watch([path.src.html], html)
+	watch([path.src.css], css)
+	watch([path.src.js], js)
+	watch([path.src.img], img)
+	watch([path.src.img], webp)
+	watch([path.src.svg], svg)
+	watch([path.src.vendors], vendors)
+	watch([path.src.fonts], fonts)
 }
 
-const build = series(
-  clean,
-  parallel(html, css, js, images, webpImages, fonts, vendors)
-)
-const watch = parallel(build, watchFiles, serve)
+const runParallel = parallel(dev, watchFiles)
 
 exports.html = html
 exports.css = css
 exports.js = js
-exports.images = images
-exports.webpImages = webpImages
-exports.fonts = fonts
-// exports.pages = pages
+exports.img = img
+exports.webpImg = webpImg
+exports.svg = svg
+exports.dev = dev
 exports.vendors = vendors
-// exports.jsVendors = jsVendors
-exports.clean = clean
-exports.build = build
-exports.watch = watch
-exports.default = watch
+exports.fonts = fonts
+exports.watchFiles = watchFiles
+exports.default = runParallel

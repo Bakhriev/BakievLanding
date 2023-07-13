@@ -1,22 +1,17 @@
 .study {
-  padding-top: 330px;
+	padding-top: 330px;
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 72px;
+	}
 
-  &__overTitle {
-    margin-bottom: 24px;
-    @media screen and (max-width: $tablet) {
-      margin-bottom: 20px;
-    }
-  }
+	&__title {
+		max-width: 490px;
+	}
 
-  &__title {
-    margin-bottom: 24px;
-    @media screen and (max-width: $tablet) {
-      margin-bottom: 20px;
-    }
-    max-width: 456px;
-  }
-
-  &__text {
-    max-width: 530px;
-  }
+	&__text {
+		max-width: 580px;
+	}
 }

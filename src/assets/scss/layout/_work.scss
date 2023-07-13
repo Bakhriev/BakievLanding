@@ -1,105 +1,105 @@
 .work {
-  position: relative;
-  padding-top: 320px;
-  @media screen and (max-width: $tablet) {
-    padding-top: 180px;
-  }
-  &__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  &__model {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-  }
+	position: relative;
+	padding-top: 448px;
+	@media screen and (max-width: $tablet) {
+		padding-top: 180px;
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__model {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+	}
 
-  &__info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    @media screen and (max-width: $tablet) {
-      gap: 20px;
-    }
-  }
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 24px;
+		@media screen and (max-width: $tablet) {
+			gap: 20px;
+		}
+	}
 
-  &__title {
-    max-width: 500px;
-    text-align: center;
-    font-size: 32px;
-    line-height: 125%;
-    letter-spacing: -0.8px;
-    text-transform: uppercase;
-    @media screen and (max-width: $tablet) {
-      font-size: 26px;
-      line-height: 137.5%;
-      letter-spacing: -0.65px;
-    }
-  }
+	&__title {
+		max-width: 500px;
+		text-align: center;
+		font-size: 32px;
+		line-height: 125%;
+		letter-spacing: -0.8px;
+		text-transform: uppercase;
+		@media screen and (max-width: $tablet) {
+			font-size: 26px;
+			line-height: 137.5%;
+			letter-spacing: -0.65px;
+		}
+	}
 
-  &__text {
-    color: $text-white;
-    text-align: center;
-    max-width: 580px;
-    font-size: 18px;
-    line-height: 150%;
-    opacity: 0.7;
-    @media screen and (max-width: $tablet) {
-      font-size: 16px;
-    }
-  }
+	&__text {
+		color: $text-white;
+		text-align: center;
+		max-width: 580px;
+		font-size: 18px;
+		line-height: 150%;
+		opacity: 0.7;
+		@media screen and (max-width: $tablet) {
+			font-size: 16px;
+		}
+	}
 
-  &__subtext {
-    margin-bottom: 56px;
-    color: $text-white;
-    opacity: 0.7;
-    text-align: center;
-    font-size: 18px;
-    line-height: 150%;
-    @media screen and (max-width: $tablet) {
-      font-size: 16px;
-    }
-  }
+	&__subtext {
+		margin-bottom: 56px;
+		color: $text-white;
+		opacity: 0.7;
+		text-align: center;
+		font-size: 18px;
+		line-height: 150%;
+		@media screen and (max-width: $tablet) {
+			font-size: 16px;
+		}
+	}
 
-  &__items {
-    @media screen and (max-width: $tablet) {
-      padding: 0 60px;
-      grid-template-columns: repeat(2, 1fr);
-    }
-    max-width: 480px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 100px;
-    grid-row-gap: 48px;
-  }
+	&__items {
+		@media screen and (max-width: $tablet) {
+			padding: 0 60px;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		max-width: 480px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-column-gap: 100px;
+		grid-row-gap: 48px;
+	}
 
-  &__item {
-    img {
-      width: 56px;
-      height: 56px;
-      object-fit: cover;
-    }
-  }
+	&__item {
+		img {
+			width: 56px;
+			height: 56px;
+			object-fit: cover;
+		}
+	}
 }
 .libraries {
-  &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-  }
-  &__name {
-    font-size: 20px;
-    font-family: 'Neue Machina';
-    line-height: 125%;
-    letter-spacing: -0.5px;
-    @media screen and (max-width: $tablet) {
-      font-size: 16px;
-      line-height: 100%;
-    }
-  }
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 32px;
+	}
+	&__name {
+		font-size: 20px;
+		font-family: 'Neue Machina';
+		line-height: 125%;
+		letter-spacing: -0.5px;
+		@media screen and (max-width: $tablet) {
+			font-size: 16px;
+			line-height: 100%;
+		}
+	}
 }

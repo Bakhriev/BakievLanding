@@ -1,96 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-  <head>
+	<head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="assets/css/main.min.css" />
-  <title>Bakiev</title>
+  <title>BNPI</title>
 </head>
 
-  <body>
-    <div class="wrapper">
-      <a href="#" class="video-card">
-        <div class="video-card__content">
-          <button class="video-card__btn" aria-label="click to play video">
-            <svg
-              width="7"
-              height="9"
-              viewBox="0 0 7 9"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                opacity="0.8"
-                d="M6.34517 3.29551C7.00055 3.70833 7.00055 4.7648 6.34517 5.17762L1.56204 8.19009C0.919243 8.59492 0.125 8.07484 0.125 7.24904V1.22408C0.125 0.398308 0.919243 -0.121792 1.56204 0.283052L6.34517 3.29551Z"
-                fill="white"
-              />
-            </svg>
-          </button>
-          <div class="video-card__text text-white-gradient">
-            Включить видео-версию сайта
-          </div>
-        </div>
-      </a>
-      <div class="overlay"></div>
-      <header class="header">
-  <div class="container header__container">
-    <a href="#" class="header__logo">
-      <img
-        width="108"
-        height="29"
-        src="./assets/img/icons/logo.svg"
-        alt="Logo"
-      />
-    </a>
-    <div class="header__navigation">
-      <nav class="nav header__nav">
-        <ul class="nav__list">
-          <li>
-            <a href="#" class="nav__link duplicate">Услуги</a>
-          </li>
-          <li>
-            <a href="#" class="nav__link duplicate">Кейсы</a>
-          </li>
-          <li>
-            <button class="dropdown" data-dropdown>
-              <div class="dropdown__wrapper">
-                <div class="selected nav__link">RUS</div>
-              </div>
-              <ul class="sub-menu">
-                <li><a class="sub-menu__link" href="#">ENG</a></li>
-              </ul>
-            </button>
-          </li>
-          <li>
-            <button class="header__btn">
-              <span>Видео-версия сайта</span>
-              <svg
-                width="12"
-                height="14"
-                viewBox="0 0 12 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  opacity="0.6"
-                  d="M11.1212 5.39086C12.2929 6.09674 12.2929 7.90323 11.1212 8.60912L2.56931 13.7602C1.42004 14.4525 0 13.5632 0 12.1511V1.84887C0 0.436862 1.42004 -0.45247 2.56931 0.239782L11.1212 5.39086Z"
-                  fill="white"
-                />
-              </svg>
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="burger">
-      <span></span>
-    </div>
-  </div>
+	<body>
+		<div class="wrapper">
+			<div class="overlay"></div>
+			<header class="header">
+	<div class="container header__container">
+		<a href="#" class="header__logo">
+			<img width="108" height="29" src="assets/img/logo.svg" alt="logo" />
+		</a>
+		<div class="header__navigation">
+			<nav class="nav header__nav">
+				<ul class="nav__list">
+					<li>
+						<a href="#" class="nav__link duplicate">Услуги</a>
+					</li>
+					<li>
+						<a href="#" class="nav__link duplicate">Кейсы</a>
+					</li>
+					<li>
+						<button class="dropdown" data-dropdown>
+							<div class="dropdown__wrapper">
+								<div class="selected nav__link">RUS</div>
+							</div>
+							<ul class="sub-menu">
+								<li><a class="sub-menu__link" href="#">ENG</a></li>
+							</ul>
+						</button>
+					</li>
+					<li>
+						<button class="header__btn">
+							<span>Видео-версия сайта</span>
+							<svg>
+								<use xlink:href="assets/img/svg/sprite.svg#play"></use>
+							</svg>
+						</button>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="burger">
+			<span></span>
+		</div>
+	</div>
 </header>
 
-      <main class="main">
-        <section class="hero">
+			<main class="main">
+				<section class="hero">
   <div class="hero__container container">
     <h1 class="hero__title title text-white-gradient">
       исследование и&nbsp;развитие цифровых инициатив
@@ -104,83 +67,83 @@
     </button>
   </div>
 </section>
- <section class="founder">
-  <div class="founder__container container">
-    <div class="founder__info">
-      <div class="founder__img-circle">
-        <picture>
-          <source
-            srcset="./assets/img/content/founder.webp"
-            type="image/webp"
-          />
-          <img
-            class="founder__img"
-            width="80"
-            height="80"
-            src="./assets/img/content/heroHumans.jpg"
-            alt="doctor examines patient"
-          />
-        </picture>
-      </div>
-      <h4 class="founder__name text-white-gradient">Руслан Бакиев</h4>
-      <h4 class="founder__role">Основатель компании</h4>
-      <div class="founder__text text-white-gradient">
-        Дратути! На&nbsp;связи Руслан Бакиев&nbsp;&mdash; основатель агентства
-        цифровых трансформаций &laquo;Бакиев и&nbsp;Партнеры&raquo;
-        и&nbsp;мы&nbsp;готовы помочь вам, если у&nbsp;вас есть намерение:
-      </div>
-    </div>
-    <ul class="founder__items">
-      <li class="founder__item">
-        <h5 class="founder__step text-white-gradient">
-          <span>Запустить</span>
-          <span>start-up</span>
-        </h5>
-        <div class="founder__stepInfo">
-          В&nbsp;таких сферах как logistic, foodtech, proptech
-        </div>
-      </li>
-      <li class="founder__item">
-        <h5 class="founder__step text-white-gradient">
-          <span>Улучшить</span>
-          <span>эффективность бизнеса</span>
-        </h5>
-        <div class="founder__stepInfo">Путем внедрения цифровых технологий</div>
-      </li>
-      <li class="founder__item">
-        <h5 class="founder__step text-white-gradient">
-          <span>Воплотить инициативу</span>
-          <span>в жизнь</span>
-        </h5>
-        <div class="founder__stepInfo">Социальную или государственную</div>
-      </li>
-    </ul>
-  </div>
-</section>
- <section class="special">
-  <div class="special__container container">
-    <h2 class="special__title text-white-gradient">
-      Найдем <span class="gradient-text">особенный подход</span> к вашему
-      проекту
-    </h2>
-    <p class="special__text">
-      Мы&nbsp;пропагандируем data-driven концепцию&nbsp;&mdash; это значит что
-      мы&nbsp;планируем, собираем данные и&nbsp;принимаем решения
-      на&nbsp;их&nbsp;основе.
-    </p>
-    <p class="special__text">
-      При реализации проекта мы&nbsp;используем спиральный подход. Это означает,
-      что мы&nbsp;двигаемся постепенно к&nbsp;намеченной цели, определяя этапы,
-      цели и&nbsp;критерии успеха.
-    </p>
-    <p class="special__text">
-      Это позволяет нам эффективно использовать бюджет и&nbsp;получить
-      необходимую гибкость, чтобы внести изменения в&nbsp;любой момент.
-    </p>
-  </div>
+
+				<section class="founder">
+	<div class="founder__container container">
+		<div class="founder__info">
+			<div class="founder__img-circle">
+				<picture>
+					<source srcset="assets/img/webp/founder.webp" type="image/webp" />
+					<img
+						class="founder__img"
+						width="80"
+						height="80"
+						src="assets/img/heroHumans.jpg"
+						alt="doctor examines patient"
+					/>
+				</picture>
+			</div>
+			<h4 class="founder__name text-white-gradient">Руслан Бакиев</h4>
+			<h4 class="founder__role">Основатель компании</h4>
+			<div class="founder__text text-white-gradient">
+				Дратути! На&nbsp;связи Руслан Бакиев&nbsp;&mdash; основатель агентства
+				цифровых трансформаций &laquo;Бакиев и&nbsp;Партнеры&raquo;
+				и&nbsp;мы&nbsp;готовы помочь вам, если у&nbsp;вас есть намерение:
+			</div>
+		</div>
+		<ul class="founder__items">
+			<li class="founder__item">
+				<h5 class="founder__step text-white-gradient">
+					<span>Запустить</span>
+					<span>start-up</span>
+				</h5>
+				<div class="founder__stepInfo">
+					В&nbsp;таких сферах как logistic, foodtech, proptech
+				</div>
+			</li>
+			<li class="founder__item">
+				<h5 class="founder__step text-white-gradient">
+					<span>Улучшить</span>
+					<span>эффективность бизнеса</span>
+				</h5>
+				<div class="founder__stepInfo">Путем внедрения цифровых технологий</div>
+			</li>
+			<li class="founder__item">
+				<h5 class="founder__step text-white-gradient">
+					<span>Реализовать цифровую</span>
+					<span>инициативу</span>
+				</h5>
+				<div class="founder__stepInfo">Корпоративную или государственную</div>
+			</li>
+		</ul>
+	</div>
 </section>
 
-        <section class="services">
+				<section class="special">
+	<div class="container">
+		<div class="special__info">
+			<h2 class="special__title text-white-gradient">
+				Найдем особенный подход к вашему проекту
+			</h2>
+			<p class="special__text">
+				Мы&nbsp;пропагандируем data-driven концепцию&nbsp;&mdash; это значит что
+				мы&nbsp;планируем, собираем данные и&nbsp;принимаем решения
+				на&nbsp;их&nbsp;основе.
+			</p>
+			<p class="special__text">
+				При реализации проекта мы&nbsp;используем спиральный подход. Это
+				означает, что мы&nbsp;двигаемся постепенно к&nbsp;намеченной цели,
+				определяя этапы, цели и&nbsp;критерии успеха.
+			</p>
+			<p class="special__text">
+				Это позволяет нам эффективно использовать бюджет и&nbsp;получить
+				необходимую гибкость, чтобы внести изменения в&nbsp;любой момент.
+			</p>
+		</div>
+	</div>
+</section>
+
+				<section class="services">
   <div class="container">
     <div class="services__container">
       <h4 class="services__title gradient-text-2">Наши услуги</h4>
@@ -210,109 +173,132 @@
     </div>
   </div>
 </section>
- <section class="study">
-  <div class="study__container container">
-    <div class="step-container">
-      <h4 class="study__overTitle gradient-text-2 step-overtitle">
-        Подробное изучение
-      </h4>
-      <h3 class="study__title step-title text-white-gradient">
-        Исследование среды для внедрения цифровых продуктов
-      </h3>
-      <p class="study__text step-text">
-        Трансформация бизнеса, запуск стартапа или новая инициатива требуют
-        проведения исследования, на&nbsp;основе которого будут приниматься
-        дальнейшие решения
-      </p>
-    </div>
-  </div>
+
+				<section class="study">
+	<div class="study__container container">
+		<div class="step-container">
+			<h4 class="study__overTitle gradient-text-2 step-overtitle">
+				Подробное изучение
+			</h4>
+			<h3 class="study__title step-title text-white-gradient">
+				Исследование среды для внедрения цифровых продуктов
+			</h3>
+			<p class="study__text step-text">
+				Трансформация бизнеса, запуск стартапа или новая инициатива требуют
+				проведения исследования, на&nbsp;основе которого будут приниматься
+				дальнейшие решения
+			</p>
+		</div>
+		<img
+			width="516"
+			height="308"
+			src="assets/img/infografic-1.svg"
+			alt="info"
+		/>
+	</div>
 </section>
  <section class="risk">
-  <div class="risk__container container">
-    <div class="gradient-text-2 step-overtitle risk__overTitle">
-      Минимизация рисков
-    </div>
-    <h3 class="risk__title step-title text-white-gradient">
-      Проектирование информационных систем
-    </h3>
-    <p class="risk__text step-text">
-      Проектирование информационной системы необходимо для минимизации рисков и
-      ускорения процесса разработки программного обеспечения. Для достижение
-      результата мы используем научный подход и лучшие мировые практики
-    </p>
-  </div>
+	<div class="risk__container container">
+		<div class="gradient-text-2 step-overtitle risk__overTitle">
+			Минимизация рисков
+		</div>
+		<h3 class="risk__title step-title text-white-gradient">
+			Проектирование информационных систем
+		</h3>
+		<p class="risk__text step-text">
+			Проектирование информационной системы необходимо для минимизации рисков и
+			ускорения процесса разработки программного обеспечения. Для достижение
+			результата мы используем научный подход и лучшие мировые практики
+		</p>
+		<img
+			src="assets/img/infografic-2.svg"
+			alt="info"
+			class="risk__infografic"
+		/>
+	</div>
 </section>
 
-        <section class="design">
-  <div class="design__container container">
-    <div class="design__info">
-      <div class="design__overTitle gradient-text-2 step-overtitle">
-        Определение дизайн-подхода
-      </div>
-      <h3 class="design__title step-title text-white-gradient">
-        Разработка спецификации требований к информационной системе
-      </h3>
-      <p class="design__text step-text">
-        После того, как мы получили модель будущей ИС, необходимо подготовить
-        требования разработки. Мы разрабатываем документ, который описывает
-        дизайн-подход к разработке ИС и содержит мотивы, формирующие требования
-        к системе, а не просто техническое задание
-      </p>
-    </div>
-  </div>
-</section>
- <section class="help">
-  <div class="help__container container">
-    <div class="help__overTitle gradient-text-2 step-overtitle">
-      Помощь в организации
-    </div>
-    <h3 class="help__title step-title text-white-gradient">Программирование</h3>
-    <p class="help__text step-text">
-      Если вы желаете реализовать проект, мы готовы помочь вам и организовать
-      процесс разработки - собрать команду, выстроить работу с подрядчиками. В
-      данном контексте работы всю ответственность за выполнение работ мы берем
-      на себя
-    </p>
-    <button class="help__btn btn gradient-border">
-      <span class="text-white-gradient">Хочу эффективный бизнес</span>
-    </button>
-  </div>
-</section>
- <section class="clients">
-  <div class="clients__container">
-    <div class="clients__runner container">
-      <div class="clients__title title">нашы клиенты</div>
-      <div class="clients__items">
-        <div class="clients__item">
-          <img
-            width="187"
-            height="57"
-            src="assets/img/content/clients1.png"
-            alt="clients"
-          />
-        </div>
-        <div class="clients__item">
-          <img
-            width="187"
-            height="57"
-            src="assets/img/content/clients2.png"
-            alt="clients"
-          />
-        </div>
-        <div class="clients__item">
-          <img
-            width="187"
-            height="57"
-            src="assets/img/content/clients3.png"
-            alt="clients"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
+				<section class="design">
+	<div class="design__container container">
+		<div class="step-container">
+			<div class="design__overTitle gradient-text-2 step-overtitle">
+				Определение дизайн-подхода
+			</div>
+			<h3 class="design__title step-title text-white-gradient">
+				Разработка спецификации требований к информационной системе
+			</h3>
+			<p class="design__text step-text">
+				После того, как мы&nbsp;получили модель будущей&nbsp;ИС, необходимо
+				подготовить требования разработки. Мы&nbsp;разрабатываем документ,
+				который описывает дизайн-подход к&nbsp;разработке&nbsp;ИС
+				и&nbsp;содержит мотивы, формирующие требования к&nbsp;системе,
+				а&nbsp;не&nbsp;просто техническое задание
+			</p>
+		</div>
+		<img
+			width="516"
+			height="308"
+			src="assets/img/infografic-3.svg"
+			alt="info"
+		/>
+	</div>
 </section>
 
-        <section class="experience">
+				<section class="help">
+	<div class="help__container container">
+		<div class="help__overTitle gradient-text-2 step-overtitle">
+			Помощь в организации
+		</div>
+		<h3 class="help__title step-title text-white-gradient">Программирование</h3>
+		<p class="help__text step-text">
+			Если вы желаете реализовать проект, мы готовы помочь вам и <br />
+			организовать процесс разработки - собрать команду, выстроить <br />
+			работу с подрядчиками. В данном контексте работы всю <br />
+			ответственность за выполнение работ
+			<br />
+			мы берем на себя
+		</p>
+		<button class="help__btn btn gradient-border">
+			<span class="text-white-gradient">Хочу эффективный бизнес</span>
+		</button>
+	</div>
+</section>
+
+				<section class="clients">
+	<div class="clients__container">
+		<div class="clients__runner container">
+			<div class="clients__title title">нашы клиенты</div>
+			<div class="clients__items">
+				<div class="clients__item">
+					<img
+						width="187"
+						height="57"
+						src="assets/img/clients1.png"
+						alt="clients"
+					/>
+				</div>
+				<div class="clients__item">
+					<img
+						width="187"
+						height="57"
+						src="assets/img/clients2.png"
+						alt="clients"
+					/>
+				</div>
+				<div class="clients__item">
+					<img
+						width="187"
+						height="57"
+						src="assets/img/clients3.png"
+						alt="clients"
+					/>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+				<section class="experience">
   <div class="container">
     <div class="experience__info">
       <div class="experience__overTitle gradient-text-2 step-overtitle">
@@ -340,146 +326,120 @@
     </ul>
   </div>
 </section>
- <section class="work">
-  <div class="work__container container">
-    <div class="work__info">
-      <div class="work__overtitle step-overtitle gradient-text-2">
-        Принципы работы
-      </div>
-      <h2 class="work__title title text-white-gradient">
-        бережливое производство и Open source
-      </h2>
-      <p class="work__text">
-        Мы ценим ваше время и готовы использовать уже внедренные системы в вашей
-        компании или применять мощные open-source решения, которые позволят
-        сконцентрироваться на целях.
-      </p>
-      <div class="work__subtext">Библиотеки, с которыми мы работаем:</div>
-    </div>
-    <ul class="work__items libraries">
-      <li class="work__item libraries__item">
-        <img src="assets/img/content/odoo.png" alt="libraries" />
-        <div class="libraries__name text-white-gradient">Odoo</div>
-      </li>
-      <li class="work__item libraries__item">
-        <img src="assets/img/content/react.png" alt="libraries" />
-        <div class="libraries__name text-white-gradient">Reactjs</div>
-      </li>
-      <li class="work__item libraries__item">
-        <img src="assets/img/content/django.png" alt="libraries" />
-        <div class="libraries__name text-white-gradient">Django</div>
-      </li>
-      <li class="work__item libraries__item">
-        <img src="assets/img/content/flutter.png" alt="libraries" />
-        <div class="libraries__name text-white-gradient">Flutter</div>
-      </li>
-      <li class="work__item libraries__item">
-        <img src="assets/img/content/grpc.png" alt="libraries" />
-        <div class="libraries__name text-white-gradient">Gprc</div>
-      </li>
-      <li class="work__item libraries__item">
-        <img src="assets/img/content/camunda.png" alt="libraries" />
-        <div class="libraries__name text-white-gradient">Camunda</div>
-      </li>
-    </ul>
-  </div>
+
+				<section class="work">
+	<div class="work__container container">
+		<div class="work__info">
+			<div class="work__overtitle step-overtitle gradient-text-2">
+				Принципы работы
+			</div>
+			<h2 class="work__title title text-white-gradient">
+				бережливое производство и Open source
+			</h2>
+			<p class="work__text">
+				Мы ценим ваше время и готовы использовать уже внедренные системы в вашей
+				компании или применять мощные open-source решения, которые позволят
+				сконцентрироваться на целях.
+			</p>
+			<div class="work__subtext">Библиотеки, с которыми мы работаем:</div>
+		</div>
+		<ul class="work__items libraries">
+			<li class="work__item libraries__item">
+				<img src="assets/img/odoo.png" alt="libraries" />
+				<div class="libraries__name text-white-gradient">Odoo</div>
+			</li>
+			<li class="work__item libraries__item">
+				<img src="assets/img/react.png" alt="libraries" />
+				<div class="libraries__name text-white-gradient">Reactjs</div>
+			</li>
+			<li class="work__item libraries__item">
+				<img src="assets/img/django.png" alt="libraries" />
+				<div class="libraries__name text-white-gradient">Django</div>
+			</li>
+			<li class="work__item libraries__item">
+				<img src="assets/img/flutter.png" alt="libraries" />
+				<div class="libraries__name text-white-gradient">Flutter</div>
+			</li>
+			<li class="work__item libraries__item">
+				<img src="assets/img/grpc.png" alt="libraries" />
+				<div class="libraries__name text-white-gradient">Gprc</div>
+			</li>
+			<li class="work__item libraries__item">
+				<img src="assets/img/camunda.png" alt="libraries" />
+				<div class="libraries__name text-white-gradient">Camunda</div>
+			</li>
+		</ul>
+	</div>
 </section>
  <div class="message">
-  <div class="message__container">
-    <div class="chat">
-      <!--  -->
-      <div class="chat__box">
-        <div class="chat__img">
-          <img src="assets/img/content/photo.png" alt="profile photo" />
-        </div>
-        <div class="chat__messages">
-          <!-- СЮДА ДОБАВЛЯЕТСЯ СООБЩЕНИЕ -->
-          <div class="chat__msg">Привет! 👋</div>
-          <div class="chat__msg">
-            Хочешь, чтобы твой бизнес стал еще эффективнее?
-          </div>
-        </div>
-      </div>
-      <!--  -->
-      <div class="chat__box">
-        <div class="chat__messages">
-          <div class="chat__msg chat__msg--gradient">Да, конечно!</div>
-        </div>
-      </div>
-      <!--  -->
-      <div class="chat__box">
-        <div class="chat__img">
-          <img src="assets/img/content/photo.png" alt="profile photo" />
-        </div>
-        <div class="chat__messages">
-          <div class="chat__msg">Чтобы продолжить, пожалуйста, представься</div>
-          <div class="chat__msg">
-            Продолжая, ты принимаешь условия <br />
-            пользовательского соглашения
-          </div>
-        </div>
-      </div>
-      <!--  -->
-    </div>
-  </div>
-  <div class="message__container">
-    <div class="message__field">
-      <div class="message__attach">
-        <svg
-          width="37"
-          height="37"
-          viewBox="0 0 37 37"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="#8A8A8A"
-        >
-          <path
-            d="M18.0337 6.59006C21.5229 3.09769 27.1841 3.09769 30.6758 6.58941C34.078 9.99159 34.1652 15.4534 30.9375 18.9612L30.6571 19.2553L17.5435 32.3662L17.489 32.4113C15.3115 34.3735 11.9526 34.3069 9.85535 32.2096C7.88978 30.244 7.7078 27.1703 9.30943 24.9995C9.34421 24.9319 9.38631 24.8667 9.4358 24.8054L9.51561 24.7165L9.64511 24.5858L9.85535 24.3654L9.8597 24.3697L20.9403 13.2614C21.3366 12.8641 21.9574 12.8272 22.3954 13.1513L22.5209 13.2593C22.9182 13.6556 22.9551 14.2764 22.631 14.7144L22.523 14.8399L11.2056 26.1848C10.1362 27.4896 10.2105 29.4183 11.4286 30.6364C12.6641 31.8718 14.6306 31.9306 15.9357 30.8129L29.098 17.6539C31.714 15.0347 31.714 10.7888 29.0952 8.16998C26.5583 5.63303 22.4943 5.55375 19.8619 7.93214L19.6117 8.16998L19.593 8.19131L5.3822 22.4022C4.94573 22.8386 4.23809 22.8386 3.80162 22.4022C3.40484 22.0054 3.36876 21.3845 3.69341 20.9469L3.80162 20.8216L18.0312 6.58941L18.0337 6.59006Z"
-            fill="#8A8A8A"
-          />
-        </svg>
-      </div>
-      <textarea
-        class="message__input"
-        placeholder="Начните вводить сообщение..."
-      ></textarea>
-      <div class="message__controls">
-        <div class="message__emoji">
-          <svg
-            width="37"
-            height="37"
-            viewBox="0 0 37 37"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M18.7382 3.99023C26.9695 3.99023 33.6424 10.663 33.6424 18.8944C33.6424 27.1257 26.9695 33.7985 18.7382 33.7985C10.5069 33.7985 3.83411 27.1257 3.83411 18.8944C3.83411 10.663 10.5069 3.99023 18.7382 3.99023ZM18.7382 6.22551C11.7414 6.22551 6.06938 11.8975 6.06938 18.8944C6.06938 25.8912 11.7414 31.5632 18.7382 31.5632C25.735 31.5632 31.4071 25.8912 31.4071 18.8944C31.4071 11.8975 25.735 6.22551 18.7382 6.22551ZM13.4656 23.042C14.7309 24.648 16.6548 25.6025 18.7382 25.6025C20.8188 25.6025 22.7404 24.6506 24.0059 23.0482C24.3885 22.5638 25.0913 22.4813 25.5757 22.8639C26.0601 23.2464 26.1426 23.9493 25.7601 24.4337C24.075 26.5671 21.5102 27.8378 18.7382 27.8378C15.9625 27.8378 13.3946 26.5637 11.7098 24.4254C11.3278 23.9405 11.4112 23.2378 11.896 22.8558C12.3809 22.4738 13.0836 22.5572 13.4656 23.042ZM14.2684 14.0522C15.2965 14.0522 16.13 14.8857 16.13 15.9139C16.13 16.9421 15.2965 17.7756 14.2684 17.7756C13.2402 17.7756 12.4067 16.9421 12.4067 15.9139C12.4067 14.8857 13.2402 14.0522 14.2684 14.0522ZM23.2094 14.0522C24.2376 14.0522 25.0711 14.8857 25.0711 15.9139C25.0711 16.9421 24.2376 17.7756 23.2094 17.7756C22.1813 17.7756 21.3478 16.9421 21.3478 15.9139C21.3478 14.8857 22.1813 14.0522 23.2094 14.0522Z"
-              fill="#8A8A8A"
-            />
-          </svg>
-        </div>
-        <div class="message__voice">
-          <svg
-            width="37"
-            height="37"
-            viewBox="0 0 37 37"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M27.6183 17.4033C28.1841 17.4033 28.6517 17.8238 28.7257 18.3693L28.7359 18.521L28.7359 19.2661C28.7359 24.5702 24.6304 28.9155 19.4238 29.2975L19.4223 32.6777C19.4223 33.2949 18.9219 33.7953 18.3047 33.7953C17.7389 33.7953 17.2713 33.3749 17.1972 32.8293L17.187 32.6777L17.1871 29.2976C12.0954 28.9248 8.05646 24.7619 7.87946 19.6182L7.87341 19.2661L7.87341 18.521C7.87341 17.9037 8.3738 17.4033 8.99105 17.4033C9.55686 17.4033 10.0245 17.8238 10.0985 18.3693L10.1087 18.521L10.1087 19.2661C10.1087 23.4788 13.4384 26.9139 17.6097 27.083L17.9321 27.0895L18.6772 27.0895C22.89 27.0895 26.325 23.7598 26.4942 19.5885L26.5007 19.2661L26.5007 18.521C26.5007 17.9037 27.0011 17.4033 27.6183 17.4033ZM18.3047 3.9917C21.5967 3.9917 24.2654 6.66041 24.2654 9.95242L24.2654 18.8935C24.2654 22.1855 21.5967 24.8542 18.3047 24.8542C15.0127 24.8542 12.344 22.1855 12.344 18.8935L12.344 9.95242C12.344 6.66041 15.0127 3.9917 18.3047 3.9917ZM18.3047 6.22697C16.2472 6.22697 14.5792 7.89491 14.5792 9.95242L14.5792 18.8935C14.5792 20.951 16.2472 22.619 18.3047 22.619C20.3622 22.619 22.0301 20.951 22.0301 18.8935L22.0301 9.95242C22.0301 7.89491 20.3622 6.22697 18.3047 6.22697Z"
-              fill="#8A8A8A"
-            />
-          </svg>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="message__container">
+		<div class="chat">
+			<!--  -->
+			<div class="chat__box">
+				<div class="chat__img">
+					<img src="assets/img/photo.png" alt="profile photo" />
+				</div>
+				<div class="chat__messages">
+					<!-- СЮДА ДОБАВЛЯЕТСЯ СООБЩЕНИЕ -->
+					<div class="chat__msg">Привет! 👋</div>
+					<div class="chat__msg">
+						Хочешь, чтобы твой бизнес стал еще эффективнее?
+					</div>
+				</div>
+			</div>
+			<!--  -->
+			<div class="chat__box">
+				<div class="chat__messages">
+					<div class="chat__msg chat__msg--gradient">Да, конечно!</div>
+				</div>
+			</div>
+			<!--  -->
+			<div class="chat__box">
+				<div class="chat__img">
+					<img src="assets/img/photo.png" alt="profile photo" />
+				</div>
+				<div class="chat__messages">
+					<div class="chat__msg">Чтобы продолжить, пожалуйста, представься</div>
+					<div class="chat__msg">
+						Продолжая, ты принимаешь условия <br />
+						пользовательского соглашения
+					</div>
+				</div>
+			</div>
+			<!--  -->
+		</div>
+	</div>
+	<div class="message__container">
+		<div class="message__field">
+			<div class="message__attach">
+				<svg class="attach-icon chat-icon">
+					<use xlink:href="assets/img/svg/sprite.svg#attach"></use>
+				</svg>
+			</div>
+			<textarea
+				class="message__input"
+				placeholder="Начните вводить сообщение..."
+			></textarea>
+			<div class="message__controls">
+				<div class="message__emoji">
+					<svg class="emoji-icon chat-icon">
+						<use xlink:href="assets/img/svg/sprite.svg#emoji"></use>
+					</svg>
+				</div>
+				<div class="message__voice">
+					<svg class="voice-icon chat-icon">
+						<use xlink:href="assets/img/svg/sprite.svg#mic"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
-      </main>
-      <footer class="footer"></footer>
+			</main>
+			<footer class="footer"></footer>
 
-    </div>
-    <script type="module" src="./assets/js/main.min.js"></script>
-  </body>
+		</div>
+		<script type="module" src="./assets/js/main.min.js"></script>
+	</body>
 </html>
