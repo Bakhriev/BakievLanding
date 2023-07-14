@@ -41,8 +41,6 @@ p {
 img {
     display: block;
     max-width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
 }
 
 body {
@@ -543,7 +541,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .header.scrolled {
-    background-color: #03041b;
+    background: linear-gradient(180deg, #000115 0%, rgba(0, 1, 21, 0) 100%);
 }
 
 .header__logo {
@@ -558,6 +556,9 @@ body::-webkit-scrollbar-thumb {
 .header__container {
     display: flex;
     align-items: center;
+    max-width: 1400px;
+    padding: 0 20px;
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 992px) {
