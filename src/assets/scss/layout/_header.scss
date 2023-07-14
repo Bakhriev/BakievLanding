@@ -3,7 +3,7 @@
 	position: fixed;
 	transition: background-color 0.2s linear;
 	&.scrolled {
-		background-color: #03041b;
+		background: linear-gradient(180deg, #000115 0%, rgba(0, 1, 21, 0) 100%);
 	}
 	left: 0;
 	right: 0;
@@ -24,7 +24,8 @@
 	&__container {
 		display: flex;
 		align-items: center;
-
+		max-width: 1400px;
+		padding: 0 20px;
 		@media screen and (max-width: $tablet) {
 			justify-content: space-between;
 		}
